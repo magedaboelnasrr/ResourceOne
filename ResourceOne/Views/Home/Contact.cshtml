@@ -1,0 +1,217 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+<style>
+
+    html, body {
+        overflow-x: hidden;
+    }
+    /*** Appoinment ***/
+    .appoinment {
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/CompetencyInside.jpg) left center no-repeat;
+        background-size: cover;
+    }
+
+</style>
+
+<!-- About Start -->
+
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Contact Us</h1>
+    </div>
+</div>
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+<!-- Contact Start -->
+<div class="pt-4 pb-4">
+    <div class="container-fluid appoinment py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container pt-5">
+            <div class="row gy-5 gx-0">
+                <div class="col-lg-6 pe-lg-5 wow fadeIn" data-wow-delay="0.3s">
+                    <h1 class="display-6 text-uppercase text-white mb-4">
+                        Let's Start a Conversation We're Here to Help
+                    </h1>
+                    <p class="text-white mb-5 wow fadeIn" data-wow-delay="0.4s">Whether you have a specific challenge you'd like to discuss, or you're interested in learning more about how our services can help your business grow, our team is ready to listen. Please use the form below for your inquiries, or contact us directly through one of the channels listed.</p>
+                    <div class="d-flex align-items-start wow fadeIn" data-wow-delay="0.5s">
+                        <div class="btn-lg-square bg-white">
+                            <i class="bi bi-envelope-at text-dark fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h6 class="text-white text-uppercase">Mail Us</h6>
+                            <a href="mailto:recruitment@resourcesone.com" class="text-white text-decoration-none">
+                                recruitment@resourcesone.com
+                            </a>
+                            <br />
+                            <a href="mailto:Info@resourcesone.com" class="text-white text-decoration-none">
+                                Info@resourcesone.com
+                            </a>
+                        </div>
+                    </div>
+                    <hr class="bg-body">
+                    <div class="d-flex align-items-start flex-column wow fadeIn" data-wow-delay="0.6s">
+                        <!-- Call Us -->
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="btn-lg-square bg-white">
+                                <i class="fa fa-phone text-dark fs-3"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="text-white text-uppercase">Call Us</h6>
+                                <a href="tel:+201157705757" class="text-white text-decoration-none">
+                                    +20-1157705757
+                                </a> /
+                                <a href="tel:+201158681919" class="text-white text-decoration-none">
+                                    +20-1158681919
+                                </a> /
+                                <a href="tel:+201158681919" class="text-white text-decoration-none">
+                                    0223571689
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="d-flex align-items-center">
+                            <div class="btn-lg-square bg-white">
+                                <i class="fa fa-location-dot text-dark fs-3"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="text-white text-uppercase">Address</h6>
+                                <span class="text-white">No7 Ibrahim Shehata St, At Taseah, Nasr City, Cairo Governorate</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center my-3">
+                            <div class="btn-lg-square bg-white">
+                                <i class="fa fa-clock text-dark fs-3"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="text-white text-uppercase">Working Hours</h6>
+                                <span class="text-white">Sunday - Thursday: 9:00 AM - 5:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 my-5 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="bg-white p-5" style="border-radius:50px;">
+                        <h2 class="text-uppercase mb-4">Send Us a Message</h2>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0 bg-light" name="Name" placeholder="Your Name" required>
+                                        <label>Full Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0 bg-light" name="Name" placeholder="Your Name" required>
+                                        <label>Company Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0 bg-light" name="Email" placeholder="Your Email" required>
+                                        <label>Corporate Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0 bg-light" name="Mobile" placeholder="Your Mobile">
+                                        <label>Your Mobile</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0 bg-light" name="Subject" placeholder="Subject" required>
+                                        <label>Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <select name="Services" class="form-control  bg-light" required>
+                                            <option>-- Select Our Services --</option>
+                                            <option value="Competency Assessments">Competency Assessments</option>
+                                            <option value="Payroll Outsourcing">Payroll Outsourcing</option>
+                                            <option value="B2B Training">B2B Training</option>
+                                            <option value="Recruitment Services">Recruitment Services</option>
+                                            <option value="Salary Surveys">Salary Surveys</option>
+                                            <option value="Governance & Restructuring">Governance & Restructuring</option>
+                                            <option value="Technical Education Initiative">Technical Education Initiative</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0 bg-light" name="Message" placeholder="Leave a message here" style="height: 130px" required></textarea>
+                                        <label>Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-primary w-100 py-3" style="border-radius:50px;" type="submit">Submit Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0 wow fadeInUp mt-5" data-wow-delay="0.5s">
+        <iframe class="w-100 h-100"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9577.725013174442!2d31.376687!3d30.054729!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583dbf9efb9847%3A0x96921919766adda4!2zSWJyYWhpbSBTaGVoYXRhIFN0LCDYp9mE2KrYp9iz2LnYqdiMINmF2K_ZitmG2Kkg2YbYtdix2Iwg2YXYrdin2YHYuNipINin2YTZgtin2YfYsdip4oCs!5e1!3m2!1sar!2seg!4v1756292911867!5m2!1sar!2seg"
+                frameborder="0" style="min-height: 500px; border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+    </div>
+</div>
+
+
+<!-- Contact End -->
+@section Scripts {
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- JS Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            toastr.options = {
+                "positionClass": "toast-bottom-right",
+                "timeOut": "5000",
+                "extendedTimeOut": "2000",
+                "showDuration": "100",
+                "hideDuration": "300",
+                "progressBar": true,
+                "closeButton": true
+            };
+
+            $("#contactForm").submit(function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: '@Url.Action("Send", "Home")',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            toastr.success(response.message);
+                            $("#contactForm")[0].reset();
+                        } else {
+                            toastr.error(response.message);
+                        }
+                    },
+                    error: function () {
+                        toastr.error("Invalid server connection");
+                    }
+                });
+            });
+        });
+    </script>
+
+}

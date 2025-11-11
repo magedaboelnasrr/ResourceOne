@@ -1,0 +1,1293 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+
+
+
+    /* Navigation */
+    navv {
+        background-color: transparent;
+        position: absolute; /* بدل fixed */
+        bottom: -1100px; /* يفضل في آخر الصورة */
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+
+
+
+
+
+
+
+    /* ===== Media Query للموبايل ===== */
+    @@media (max-width: 576px) {
+        /* ===== الصورة الرئيسية ===== */
+        .position-relative.text-center.mb-5 img {
+            height: 600px !important;
+            object-fit: cover;
+        }
+        /* ===== النص فوق الصورة الرئيسية ===== */
+        .position-absolute h1 {
+            font-size: 24px !important;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .position-absolute p {
+            font-size: 14px !important;
+            padding: 0 10px;
+        }
+        /* ===== قسم Our Story ===== */
+        section.py-5 div[style*="margin-left:150px"] {
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+        }
+
+        .row.gx-5.text-dark {
+            flex-direction: column !important;
+        }
+        /* الفيديو */
+        .col-md-6 iframe {
+            width: 100% !important;
+            height: 200px !important;
+            border-radius: 10px;
+        }
+        /* ===== النصوص والعناوين ===== */
+        h1, h2, h3 {
+            font-size: 20px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+            line-height: 1.5;
+        }
+        /* ===== الكاروسيل (Timeline Slider) ===== */
+        .slider-container {
+            height: 300px !important;
+        }
+
+        .time {
+            height: 300px !important;
+        }
+
+        .content {
+            padding: 1rem !important;
+            text-align: center;
+        }
+
+            .content h2 {
+                font-size: 22px !important;
+                margin-bottom: 10px;
+            }
+
+            .content p {
+                font-size: 14px !important;
+            }
+        /* أزرار التنقل */
+        .nav-times {
+            width: 90% !important;
+        }
+
+            .nav-times button .text {
+                font-size: 12px;
+                bottom: 20px !important;
+            }
+        /* ===== Our Vision & Our Mission ===== */
+        .d-flex {
+            flex-direction: column !important;
+        }
+
+
+        .about-imgg,
+        .about-img {
+            margin-bottom: 1.5rem;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+            .about-imgg img,
+            .about-img img {
+                border-radius: 20px !important;
+                height: 250px !important;
+                object-fit: cover;
+            }
+
+            .about-imgg::before,
+            .about-img::before {
+                display: none;
+            }
+        .values-container {
+            flex-direction: row !important;
+            align-items: center !important;
+        }
+
+        .custom-list {
+            margin-bottom: 10px !important;
+            text-align: center !important;
+            padding-left: 0 !important;
+        }
+
+            .custom-list li {
+                white-space: normal !important;
+                font-size: 14px !important;
+                margin-bottom: 5px;
+            }
+        /* ===== قسم Leadership ===== */
+        .container-fluid.pt-6.pb-6 .row {
+            flex-direction: column !important;
+        }
+
+        .container-fluid.pt-6.pb-6 img {
+            border-radius: 20px !important;
+        }
+
+        .border.border-5.border-yellow {
+            border-radius: 20px !important;
+            padding: 15px !important;
+        }
+        /* ===== الأزرار النهائية ===== */
+        .d-flex.flex-column.flex-sm-row {
+            flex-direction: column !important;
+            gap: 10px;
+        }
+    }
+
+
+
+
+
+
+
+
+    .nav-arrows {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* خليها relative علشان تبقى زي الموبايل */
+        z-index: 9999 !important;
+        margin-top: 15px; /* مسافة بسيطة فوق العناصر */
+    }
+
+        /* السهم نفسه */
+        .nav-arrows span {
+            font-size: 24px; /* نفس الحجم بتاع الموبايل */
+            color: #fff; /* لون السهم */
+            visibility: visible !important;
+            opacity: 1 !important;
+            cursor: pointer;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+            /* تأثير hover */
+            .nav-arrows span:hover {
+                color: #f3df29;
+            }
+
+
+
+
+
+
+    .nav-times {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+        position: relative;
+    }
+
+        .nav-times button {
+            background: transparent;
+            border: none; /* شيل البوردر */
+            border-radius: 0; /* شيل الدائرة */
+            max-width: unset;
+            max-height: unset;
+            min-width: unset;
+            min-height: unset;
+            cursor: pointer;
+            position: relative;
+        }
+
+            .nav-times button .innerCircle,
+            .nav-times button .horLine {
+                display: none; /* اخفاء الدائرة الداخلية والخط الصغير */
+            }
+
+    .time-divider {
+        height: 0.3px;
+        border-radius: 3px;
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+    }
+
+    .nav-times button:last-of-type {
+        margin-right: 0;
+    }
+
+
+
+    .nav-times button .innerCircle {
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+        transition: width 0.3s linear, height 0.3s linear;
+        background-color: transparent;
+    }
+
+    .nav-times button:hover .innerCircle, .nav-times button.active .innerCircle {
+        background-color: #fff;
+    }
+
+    .nav-times button.active span, .nav-times button:hover span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        transition: opacity 0.5s ease;
+        opacity: 1;
+    }
+
+    .nav-times button .text {
+        bottom: 38px;
+        font-weight: 600;
+        color: #fff;
+        opacity: 1
+    }
+
+
+
+    .nav-times button.active .text, .nav-times button:hover .text {
+        color: #fff;
+    }
+
+    .nav-times button .horLine {
+        width: 3px;
+        background: transparent;
+        height: 10px;
+        bottom: 22px;
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        border-radius: 3px;
+    }
+
+    .nav-times button.active .horLine, .nav-times button:hover .horLine {
+        width: 3px;
+        background: #fff;
+        height: 10px;
+        bottom: 22px;
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+        border-radius: 3px;
+    }
+
+
+
+    /* Slides */
+    .slider-container {
+        height: 500px;
+        display: inline-flex;
+        transform: translateX(0);
+        transition: transform 0.3s ease-out;
+        cursor: grab;
+    }
+
+    .time {
+        height: 500px;
+        width: 100vw;
+        display: flex;
+    }
+
+        .time.inactive {
+            opacity: 0;
+        }
+
+        .time.active {
+            opacity: 1;
+        }
+
+    .grabbing {
+        cursor: grabbing;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 3rem;
+        width: 100%;
+        height: calc(100vh - 160px);
+        margin: auto;
+        max-width: 800px;
+    }
+
+        .content h2 {
+            color: #fff;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            text-align: left;
+        }
+
+        .content p {
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+    .t0 {
+        background: radial-gradient(circle, #f3df29, #000000);
+        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/1987.png"); */
+        z-index: 9;
+    }
+
+    .t1 {
+        background: radial-gradient(circle, #f3df29, #000000);
+        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/1993.png"); */
+        z-index: 7;
+    }
+
+    .t2 {
+        background: radial-gradient(circle, #f3df29, #000000);
+        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/2000.png"); */
+        z-index: 3;
+    }
+
+    .t3 {
+        background: radial-gradient(circle, #f3df29, #000000);
+        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/2001.png"); */
+        z-index: 2;
+    }
+
+    .t4 {
+        background: radial-gradient(circle, #f3df29, #000000);
+        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/2003.png"); */
+        z-index: 2;
+    }
+    /* Animation defaults */
+    .animate {
+        transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    }
+
+    .fade {
+        opacity: 0;
+    }
+
+    .slide-up {
+        transform: translateY(-500%);
+    }
+
+    .slide-down {
+        transform: translateY(500%);
+    }
+
+    .slide-left {
+        transform: translateX(-200%);
+    }
+
+    .slide-right {
+        transform: translateX(200%);
+    }
+
+
+    /* الحاوية الرئيسية للقيم */
+    .values-container {
+        display: flex;
+        justify-content: space-around; /* توزيع متساوي بين العمودين */
+        align-items: flex-start;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* القوائم */
+    .custom-list {
+        list-style-type: disc; /* إظهار النقط */
+        list-style-position: outside; /* النقطة تبقى خارج النص */
+        padding-left: 20px; /* مسافة صغيرة بين النقطة والنص */
+        margin: 0;
+        text-align: left; /* النص يبدأ من اليسار */
+    }
+
+        /* عناصر القائمة */
+        .custom-list li {
+            margin-bottom: 10px; /* مسافة بين العناصر */
+            white-space: nowrap; /* النص كله يفضل في سطر واحد */
+            font-size: 18px;
+            color: white;
+        }
+
+    /* لضمان عدم تأثر النص بمحاذاة النص في Bootstrap */
+    .text-center .custom-list {
+        text-align: left !important;
+    }
+
+    /* ===== Media Query للموبايل ===== */
+    /* ===== الميديا العامة للموبايلات ===== */
+    @@media (max-width: 576px) {
+        /* إظهار الأسهم بشكل واضح */
+        .nav-arrows
+
+    {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 9999;
+    }
+
+    /* تنسيق الأيقونات نفسها */
+    .nav-arrows span {
+        font-size: 24px !important;
+        color: #fff !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin: 0 15px;
+    }
+
+    /* علشان تتأكد إنها فوق أي عنصر تاني */
+    header navv {
+        z-index: 9999 !important;
+    }
+
+    /* تنسيق عام للموبايل */
+    navv {
+        bottom: -1600px !important;
+        padding: 0.5rem !important;
+    }
+
+    }
+
+    /* ===== تخصيص لـ iPhone XR أو أجهزة بنفس المقاس ===== */
+    @@media (min-width: 414px) and (max-height: 896px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv
+
+    {
+        bottom: -1300px !important; /* تعديل الارتفاع فقط */
+    }
+
+    }
+
+    @@media (min-width: 390px) and (max-height: 844px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv {
+            bottom: -1200px !important; /* تعديل الارتفاع فقط */
+        }
+    }
+
+    @@media (min-width: 430px) and (max-height: 932px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv {
+            bottom: -1250px !important; /* تعديل الارتفاع فقط */
+        }
+    }
+
+    @@media (min-width: 412px) and (max-height: 915px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv {
+            bottom: -1300px !important; /* تعديل الارتفاع فقط */
+        }
+    }
+
+    @@media (min-width: 360px) and (max-height: 740px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv {
+            bottom: -1550px !important; /* تعديل الارتفاع فقط */
+        }
+    }
+
+    @@media (min-width: 768px) and (max-height: 1024px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv {
+            bottom: -2100px !important; /* تعديل الارتفاع فقط */
+        }
+    }
+
+    @@media (min-width: 344px) and (max-height: 882px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv {
+            bottom: -1500px !important; /* تعديل الارتفاع فقط */
+        }
+    }
+
+    @@media (min-width: 390px) and (max-height: 664px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv {
+            bottom: -1600px !important; /* تعديل الارتفاع فقط */
+        }
+    }
+
+    @@media (min-width: 375px) and (max-height: 667px) {
+        /* تعديل الفرق فقط عن الموبايلات العادية */
+        navv {
+            bottom: -1600px !important; /* تعديل الارتفاع فقط */
+        }
+    }
+
+
+    /* ===== Media Query للموبايل ===== */
+    @@media (max-width: 576px) {
+        /* Vision و Mission sections */
+        .vision-section, .mission-section {
+            padding-top: 40px !important; /* عدّل القيمة حسب ما يناسبك */
+        }
+            /* ممكن تزود مسافة بين النص والصورة لو محتاج */
+            .vision-section .position-absolute,
+            .mission-section .position-absolute {
+                padding-top: 20px;
+            }
+    }
+
+
+    @@media (max-width: 576px) {
+        .responsive-btn {
+            width: 300px !important; /* حجم أصغر للموبايل */
+            font-size: 13px !important; /* خط أصغر */
+            padding: 8px 12px !important; /* تقليل الـ padding */
+        }
+        /* جعل الأزرار في النص */
+        .buttons-container {
+            flex-direction: column !important; /* ترتيب عمودي على الموبايل */
+            align-items: center !important; /* توسيط العناصر أفقيًا */
+        }
+    }
+
+    @@media (max-width: 767px) {
+        /* تصغير العناوين */
+        .vision-section h1, .mission-section h1, .values-section h2
+
+    {
+        font-size: 32px !important;
+    }
+
+    /* تصغير النصوص */
+    .vision-section p,
+    .mission-section p,
+    .values-section p {
+        font-size: 14px !important;
+        padding: 0 15px;
+    }
+
+    /* محاذاة النصوص في النص */
+    .vision-section .position-absolute,
+    .mission-section .position-absolute,
+    .values-section .position-absolute {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+
+    /* تصغير الصور */
+    .about-imgg img,
+    .about-img img,
+    .about-imggg img {
+        height: 400px !important;
+        width: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* ضبط الـ values */
+    .about-imggg {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .values-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+        .values-container .custom-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+            .values-container .custom-list li {
+                font-size: 14px;
+                color: white;
+            }
+
+    }
+</style>
+
+
+
+<!-- About Start -->
+
+
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">About Us</h1>
+    </div>
+</div>
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+
+
+
+
+
+
+<div class="text-center my-3">
+    <h1 class="text-dark">Our Story</h1>
+</div>
+
+
+
+
+<section class="py-5">
+    <div style="margin-left:150px; margin-right:200px;">
+        <!-- العنوان -->
+        <div class="mb-4">
+            @* <small class="text-muted fw-bold"> <span class="border-top border-2 border-primary d-inline-block ms-2" style="width:40px;"></span></small> *@
+
+        </div>
+
+        <div class="row gx-5 text-dark">
+            <!-- العمود الأول -->
+            <div class="col-md-6">
+                <h2 class="fw-bold mt-2">WHO WE ARE</h2>
+                <p>
+                    Resources-One is one of the Leading & fast growing consultancy firms in HR Industry in Egypt.
+                    As Human Resources have a strategic role within any organization, Resources One offers related variety of Integrated services like:
+                </p>
+
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="bi bi-check2-all text-primary me-2"></i>
+                        Organizational Development
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check2-all text-primary me-2"></i>
+                        Organization Designing
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check2-all text-primary me-2"></i>
+                        Capacity building (Training in both Technical and Managerial Levels)
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-check2-all text-primary me-2"></i>
+                        Online Salary Survey, and Recruitment both locally and internationally
+                    </li>
+                </ul>
+                <hr />
+                <p>
+                    Resources-One was established in 2007 for one aim, which is developing the Egyptian Corporate Industry through developing its individuals in the HRM area.
+                    Resources-One Team believes the Human capital in Egypt has to be equipped as well as skilled with all the elements ensuring its competitive advantage to fit and compete within the globalization situation.
+                </p>
+                <p>
+                    Therefore Resources-One acts like a turnkey solution for organizations wanting to make a real different within the Industry.
+                    Effective and Measured productivity of the manpower and their abilities to achieve organizational goals starts with a strong and strategic HR Management and here comes Resources-One Role.
+                </p>
+            </div>
+
+            <!-- العمود الثاني -->
+            <div class="col-md-6">
+                <iframe width="800" height="540" src="https://www.youtube.com/embed/X3cdhDbWez0?si=lN9Nc2b_MSnM0aWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="text-center  mb-5">
+    <h3 class="text-dark">Pioneering HR Excellence in Egypt Since 2007</h3>
+</div>
+
+
+<header>
+    <navv>
+        <div class="nav-arrows">
+            <span id="prevArrow" onclick="prevTime()">
+                <i class="fas fa-arrow-left"></i>
+            </span>
+        </div>
+
+        <div class="nav-times">
+            <button class="active" data-destination="0" onclick="setPositionByIndex(0)">
+                <span class="text">2007</span>
+                <span class="horLine"></span>
+
+            </button>
+
+            <div class="time-divider"></div>
+
+            <button data-destination="1" onclick="setPositionByIndex(1)">
+                <span class="text">2013</span>
+                <span class="horLine"></span>
+
+            </button>
+
+            <button data-destination="2" onclick="setPositionByIndex(2)">
+                <span class="text">2018</span>
+                <span class="horLine"></span>
+
+            </button>
+
+            <button data-destination="3" onclick="setPositionByIndex(3)">
+                <span class="text">2023</span>
+                <span class="horLine"></span>
+
+            </button>
+            <button data-destination="4" onclick="setPositionByIndex(4)">
+                <span class="text">Today</span>
+                <span class="horLine"></span>
+
+            </button>
+
+
+
+        </div>
+        <div class="nav-arrows">
+            <span id="nextArrow" onclick="nextTime()">
+                <i class="fas fa-arrow-right"></i>
+            </span>
+        </div>
+    </navv>
+</header>
+
+<main>
+    <div class="slider-container">
+        <div id="t0" data-order="0" class="time t0">
+            <div class="content">
+                <h2>2007</h2>
+                <p>2007: The Foundation Resources One was established with a clear and ambitious mission: to elevate the Egyptian corporate landscape by empowering its most valuable asset—its people. We started with the belief that strategic HR is the cornerstone of sustainable business success.</p>
+            </div>
+        </div>
+
+        <div id="t1" data-order="1" class="time t1">
+            <div class="content">
+                <h2 class="animate slide-left">2013</h2>
+                <p class="animate slide-up fade">
+                    A Landmark Year We launched our first annual Salary Survey, quickly establishing it as the most reliable and sought-after benchmark for compensation data in the Egyptian market. This marked our transition into a data-driven consultancy.
+                </p>
+            </div>
+        </div>
+
+        <div id="t2" data-order="2" class="time t2">
+            <div class="content">
+                <h2 class="animate slide-right">2018</h2>
+                <p class="animate slide-down">Global Partnerships Became the sole agent for TMA (Holland) in Egypt, bringing world-class competency assessment tools to our clients and reinforcing our commitment to international standards of excellence.</p>
+            </div>
+        </div>
+
+        <div id="t3" data-order="3" class="time t3">
+            <div class="content">
+                <h2 class="animate slide-down">2023</h2>
+                <p class="animate slide-right">
+                    National Impact In partnership with the Ministry of Education, we launched our groundbreaking Technical Education Initiative, a project designed to bridge the gap between industry needs and technical education outputs, shaping the future of Egypt's skilled workforce.
+                </p>
+            </div>
+        </div>
+
+        <div id="t4" data-order="4" class="time t4">
+            <div class="content">
+                <h2 class="animate slide-up">Today</h2>
+                <p class="animate slide-left">Your Trusted Partner With over 18 years of experience, a portfolio of Egypt's leading companies, and a flawless compliance record, we continue to be the strategic partner of choice for organizations aiming for growth, efficiency, and a thriving workplace culture.</p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<div class="d-flex">
+
+    <!-- our vision -->
+    <div class="container-fluid pt-6 pb-6 vision-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="wow fadeIn">
+                    <div class="about-imgg position-relative text-center">
+                        <!-- الصورة -->
+                        <img class="img-fluid w-100" style="height:400px; object-fit:cover; border-radius:50px;" src="~/img/vision.jpg">
+
+                        <!-- النصوص فوق الصورة -->
+                        <div class="position-absolute top-50 start-50 translate-middle" style="color:white">
+                            <h1 style="color:white; font-size:70px;" class="fw-bold">Our Vision</h1>
+                            <br />
+                            <br />
+                            <p style="color:white; font-size:17px;">
+                                To be the most trusted and impactful human capital consultancy in the MENA region,
+                                driving organizational success through innovative, data-driven, and people-focused solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- our mission -->
+    <div class="container-fluid pt-6 pb-6 mission-section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="wow fadeIn">
+                    <div class="about-img position-relative ">
+                        <!-- الصورة -->
+                        <img class="img-fluid w-100" style="height:400px; object-fit:cover; border-radius:50px;" src="~/img/mission.jpg">
+
+                        <!-- النصوص فوق الصورة -->
+                        <div class="position-absolute top-50 start-50 translate-middle text-center" style="color:white">
+                            <h1 style="color:white; font-size:70px;" class="fw-bold">Our Mission</h1>
+                            <br />
+                            <br />
+                            <p style="color:white; font-size:17px;">
+                                To empower organizations by providing them with the tools, talent, and strategies needed to build resilient teams,
+                                optimize their operations, and achieve sustainable growth in a competitive market.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<div class="container text-center pt-4 pb-6 values-section">
+    <div class="container">
+        <div class="row g-5">
+            <div class="wow fadeIn">
+                <div class="about-imggg position-relative" style="margin-right:100px; margin-left:100px;">
+
+                    <!-- الصورة -->
+                    <img class="img-fluid w-75"
+                         style="height:400px; object-fit:cover; border-radius:50px;"
+                         src="~/img/mission.jpg" />
+
+                    <!-- النصوص فوق الصورة -->
+                    <div class="position-absolute top-50 start-50 translate-middle w-100 px-5">
+
+                        <h2 style="font-size:70px; color:white;" class="fw-bold">Values</h2>
+                        <br /><br />
+
+                        <div class="values-container">
+                            <!-- العمود الأول -->
+                            <ul class="custom-list">
+                                <li>Initiative & Creativeness</li>
+                                <li>Customer Satisfaction</li>
+                                <li>Service Excellence</li>
+                                <li>Focus On Quality</li>
+                            </ul>
+
+                            <!-- العمود الثاني -->
+                            <ul class="custom-list">
+                                <li>Competitiveness</li>
+                                <li>Sustainability</li>
+                                <li>Integration</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="text-center">
+    <h1>Our Leadership</h1>
+</div>
+
+<div class="container-fluid pt-6 pb-6">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-imgg">
+                    <img class="img-fluid w-100" style="border-radius:50px;" src="~/img/nariman.jpg">
+                    <div class="border border-5 border-yellow p-4 text-center mt-4" style="border-radius:50px;">
+                        <h4 class="lh-base text-uppercase mb-0">We build the future of business by empowering your human capital</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="display-6 text-uppercase mb-4">The Driving Force Behind Our Success</h1>
+                <p class="mb-4">
+                    <i class="fa fa-check-square text-primary me-3"></i>Name: Dr. Nareman Khattab <br />
+                    <i class="fa fa-check-square text-primary me-3"></i>Title: CEO and Projects Director <br />
+                    <i class="fa fa-check-square text-primary me-3"></i>Bio: With over two decades of experience in human resources  <br />management and organizational development, Dr. Nareman Khattab is the visionary leader behind Resources One. Her profound expertise and unwavering commitment to excellence have been instrumental in shaping the company into a market leader.
+                    Dr. Khattab is a firm believer that an organization's success is a direct reflection of its people's potential. This philosophy is embedded in every service and solution Resources One offers. Her strategic direction has led to the successful implementation of large-scale national projects and the establishment of exclusive partnerships with global entities like the European Bank for Reconstruction and Development (EBRD) and TMA.
+                    As a thought leader in the HR community, Dr. Khattab is dedicated to elevating industry standards and preparing Egyptian companies for the future of work. Her leadership is not just about managing a company; it's about building a legacy of excellence. Ready to leverage this expertise for your business?
+
+
+                </p>
+                <div class="row g-5 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 btn-xl-square bg-light me-3">
+                                <i class="fa fa-users-cog fa-2x text-primary"></i>
+                            </div>
+                            <h5 class="lh-base text-uppercase mb-0">Certified Experts Trusted Team</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 btn-xl-square bg-light me-3">
+                                <i class="fa fa-tachometer-alt fa-2x text-primary"></i>
+                            </div>
+                            <h5 class="lh-base text-uppercase mb-0">Strategic Data-Driven Solutions</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+
+<section class="py-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+    <div class="container">
+        <!-- العنوان -->
+        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+
+        <!-- خط فاصل مع أيقونة -->
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            @* <i class="bi bi-flower1 text-info fs-3"></i> *@
+            <img src="~/favicon.png" style="width:30px;" />
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+        </div>
+
+        <!-- النص -->
+        <p class="mb-4" style="color:white">
+            Contact Us today and let’s make your vision a compliant, sustainable reality.
+        </p>
+
+        <!-- الأزرار -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3  buttons-container">
+            <a asp-controller="Home" asp-action="Service" class=" btn-info text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;
+        font-size: 14px !important;
+        padding: 10px !important;
+        margin-bottom: 10px;">
+                Explore Our Services <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+            <a asp-controller="Home" asp-action="Contact" class=" btn-info  text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;
+        font-size: 14px !important;
+        padding: 10px !important;
+        margin-bottom: 10px;">
+                Request A Consultation <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+@section Scripts {
+
+    <script src="https://kit.fontawesome.com/14554c09c9.js" crossorigin="anonymous"></script>
+
+    <script>
+        const slider = document.querySelector('.slider-container'),
+            times = Array.from(document.querySelectorAll('.time'));
+
+        //Get scroll position
+        let position = window.pageXOffset / (document.documentElement.clientWidth * times.length + 1);
+
+        let section = position * times.length;
+        let percentage = section % 1;
+
+        let sectionNo = section.toString().split('.')[0];
+        let size = (100 - Math.round(percentage * 100));
+        let increase = Math.round(percentage * 100);
+
+        //Global variables
+        let isDragging = false,
+            startPos = 0;
+        currentTranslate = 0;
+        prevTranslate = 0;
+        animationID = 0;
+        currentIdx = 0;
+
+        handleResize();
+
+        //Adjust View and Container height when window is resized
+        function handleResize() {
+            //Set viewport and container height
+            view = document.documentElement.clientWidth
+            containerHeight = document.documentElement.clientWidth;
+
+
+            setNavBubble();
+            setPositionByIndex(currentIdx);
+        }
+
+        window.addEventListener('resize', function () {
+            handleResize();
+        })
+
+        //Hide arrows if first or last bubble is active
+        function checkIndex() {
+            if (currentIdx === 0) {
+                document.getElementById("prevArrow").style.visibility = "hidden";
+            } else {
+                document.getElementById("prevArrow").style.visibility = "visible";
+            }
+
+            if (currentIdx === times.length - 1) {
+                document.getElementById("nextArrow").style.visibility = "hidden";
+            } else {
+                document.getElementById("nextArrow").style.visibility = "visible";
+            }
+        }
+
+        checkIndex();
+
+        function nextTime() {
+            if (currentIdx < times.length - 1) {
+                currentIdx++
+            }
+
+            setPositionByIndex(currentIdx);
+        }
+
+        function prevTime() {
+            if (currentIdx > 0) {
+                currentIdx--
+            }
+
+            setPositionByIndex(currentIdx);
+        }
+
+        function setNavBubble() {
+            //Handle active navigation bubble
+            let buttons = document.querySelectorAll(`[data-destination]`);
+            buttons.forEach((button, i) => {
+                if (buttons[i].dataset.destination === currentIdx.toString()) {
+                    buttons[i].classList.add('active');
+                    buttons[i].classList.remove('inactive');
+                } else {
+                    buttons[i].classList.remove('active');
+                    buttons[i].classList.add('inactive');
+                }
+            })
+        }
+
+        times.forEach((time, index) => {
+            const timeImage = time.querySelector('img');
+            if (timeImage) {
+                timeImage.addEventListener("dragstart", (e) => e.preventDefault());
+            }
+
+            //Wheel events
+            //time.addEventListener("wheel", onWheel);
+
+            //Touch events
+            time.addEventListener('touchstart', touchStart(index));
+            time.addEventListener('touchend', touchEnd);
+            time.addEventListener('touchmove', touchMove);
+
+            //Mouse events
+            time.addEventListener('mousedown', touchStart(index));
+            time.addEventListener('mouseup', touchEnd);
+            //time.addEventListener('mouseleave', touchEnd);
+            time.addEventListener('mousemove', touchMove);
+        });
+
+        //Disable right click menu
+        /*window.oncontextmenu = function(event){
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        }*/
+
+        function onWheel(event) {
+            if (event.deltaY == 0) return;
+
+            event.preventDefault();
+
+            const scrollAmt = event.deltaY;
+            slider.classList.remove('grabbing');
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+
+            if (scrollAmt < -10 && currentIdx < times.length - 1) {
+                currentIdx++;
+            }
+
+            if (scrollAmt > 10 && currentIdx > 0) {
+                currentIdx--;
+            }
+
+            handleContentAnimation(times[currentIdx]);
+            resetAnimations(times);
+
+            setPositionByIndex();
+        }
+
+        function touchStart(idx) {
+            return function (event) {
+                currentIdx = idx;
+                startPos = getPositionX(event);
+                isDragging = true;
+
+                setNavBubble();
+                resetAnimations(times);
+                animationID = requestAnimationFrame(animation);
+                slider.classList.add('grabbing');
+            }
+        }
+
+        function touchEnd() {
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+
+            const movedBy = currentTranslate - prevTranslate;
+
+            if (movedBy < -100 && currentIdx < times.length - 1) {
+                currentIdx++;
+            }
+
+            if (movedBy > 100 && currentIdx > 0) {
+                currentIdx--;
+            }
+
+            setNavBubble();
+            handleContentAnimation(times[currentIdx]);
+            resetAnimations(times);
+
+            setPositionByIndex();
+            slider.classList.remove('grabbing');
+        }
+
+        function touchMove(event) {
+            if (isDragging) {
+                const currentPosition = getPositionX(event);
+                currentTranslate = prevTranslate + currentPosition - startPos;
+            }
+        }
+
+        function getPositionX(event) {
+            return event.type.includes('mouse')
+                ? event.pageX
+                : event.touches[0].clientX;
+        }
+
+        function animation() {
+            setSliderPosition();
+            if (isDragging) requestAnimationFrame(animation);
+        }
+
+        function setSliderPosition() {
+            slider.style.transform = `translateX(${currentTranslate}px)`;
+        }
+
+        function setPositionByIndex(idx) {
+            resetAnimations(times);
+
+            currentIdx = idx === 0 ? 0 : idx ? idx : currentIdx;;
+
+            currentTranslate = currentIdx * -window.innerWidth;
+            prevTranslate = currentTranslate;
+
+            setSliderPosition();
+            if (idx) {
+                handleContentAnimation(times[currentIdx]);
+            }
+
+            setNavBubble();
+            checkIndex();
+        }
+
+        function handleContentAnimation(time) {
+            //Check for animation classes then apply the given animation
+            let nodes = time.children[0].childNodes;
+            for (let i = 0; i < nodes.length; i++) {
+                if (nodes[i].classList && nodes[i].classList.contains('fade')) {
+                    nodes[i].style.opacity = `1`;
+                }
+
+                if (nodes[i].classList && nodes[i].classList.contains('slide-up')) {
+                    nodes[i].style.transform = `translateY(0)`;
+                }
+
+                if (nodes[i].classList && nodes[i].classList.contains('slide-down')) {
+                    nodes[i].style.transform = `translateY(0)`;
+                }
+
+                if (nodes[i].classList && nodes[i].classList.contains('slide-left')) {
+                    nodes[i].style.transform = `translateX(0)`;
+                }
+
+                if (nodes[i].classList && nodes[i].classList.contains('slide-right')) {
+                    nodes[i].style.transform = `translateX(0)`;
+                }
+            }
+        }
+
+        function resetAnimations(times) {
+            //Check for animation classes then apply the given animation
+            times.forEach((time, idx) => {
+                let nodes = time.children[0].childNodes;
+                if (currentIdx !== idx) {
+                    for (let i = 0; i < nodes.length; i++) {
+                        if (nodes[i].classList && nodes[i].classList.contains('fade')) {
+                            nodes[i].style.opacity = '';
+                        }
+
+                        if (nodes[i].classList && nodes[i].classList.contains('slide-up')) {
+                            nodes[i].style.transform = '';
+                        }
+
+                        if (nodes[i].classList && nodes[i].classList.contains('slide-down')) {
+                            nodes[i].style.transform = '';
+                        }
+
+                        if (nodes[i].classList && nodes[i].classList.contains('slide-left')) {
+                            nodes[i].style.transform = '';
+                        }
+
+                        if (nodes[i].classList && nodes[i].classList.contains('slide-right')) {
+                            nodes[i].style.transform = '';
+                        }
+                    }
+                }
+            })
+        }
+    </script>
+}

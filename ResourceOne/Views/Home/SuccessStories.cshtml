@@ -1,0 +1,625 @@
+﻿@{
+    ViewData["Title"] = "SuccessStories";
+}
+
+
+
+
+<style>
+
+    body, html {
+        background-color: white;
+        overflow-x: hidden
+    }
+
+    .container {
+        overflow: hidden;
+        .slider
+
+    {
+        animation: slidein 30s linear infinite;
+        white-space: nowrap;
+        .logos
+
+    {
+        width: 100%;
+        display: inline-block;
+        margin: 0px 0;
+        .fab
+
+    {
+        width: calc(100% / 5);
+        animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    }
+
+    }
+    }
+    }
+
+    @@keyframes slidein {
+        from {
+            transform: translate3d(0, 0, 0);
+        }
+
+        to {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+
+    @@keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    /* الأساسيات للشاشات الكبيرة */
+    .success-title {
+        font-size: 48px;
+        line-height: 1.3;
+        display: inline-block;
+        white-space: nowrap; /* يمنع النزول لسطر جديد */
+        text-align: center;
+    }
+
+        .success-title span {
+            color: #4579bd;
+            font-family: 'Calisto MT';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 50px;
+            white-space: nowrap;
+        }
+
+    /* شاشات متوسطة (تابلت) */
+    @@media (max-width: 992px) {
+        .success-title {
+            font-size: 38px;
+        }
+
+            .success-title span {
+                font-size: 42px;
+            }
+    }
+
+    /* شاشات صغيرة (موبايل) */
+    @@media (max-width: 576px) {
+        .success-title {
+            font-size: 28px;
+            line-height: 1.4;
+            display: block; /* يسمح بالكسر للسطر الثاني */
+            white-space: normal; /* يتيح كسر النص */
+            text-align: center;
+        }
+
+            .success-title span {
+                font-size: 36px;
+                display: block; /* كلمة Yours في سطر مستقل */
+                margin-top: 8px;
+                white-space: normal;
+            }
+    }
+
+
+
+    /* ===== الأساسيات (شاشات كبيرة) ===== */
+    .partners-title {
+        border-radius: 50px;
+        max-width: 600px; /* عرض ثابت بدل margin-left/right كبير */
+        margin: 0 auto; /* يجعلها في المنتصف */
+    }
+
+        .partners-title h4 {
+            font-size: 24px;
+        }
+
+    .partners-text {
+        max-width: 800px; /* النص يكون محدود العرض */
+        margin: 0 auto;
+    }
+
+        .partners-text p {
+            color: dimgray;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+    /* ===== شاشات متوسطة (تابلت) ===== */
+    @@media (max-width: 992px) {
+        .partners-title {
+            max-width: 450px;
+            padding: 15px;
+        }
+
+            .partners-title h4 {
+                font-size: 22px;
+            }
+
+        .partners-text {
+            max-width: 600px;
+        }
+
+            .partners-text p {
+                font-size: 17px;
+            }
+    }
+
+    /* ===== شاشات صغيرة (موبايل) ===== */
+    @@media (max-width: 576px) {
+        .partners-title {
+            max-width: 90%; /* تقريباً ملء الشاشة مع ترك مسافة */
+            padding: 12px;
+        }
+
+            .partners-title h4 {
+                font-size: 20px;
+            }
+
+        .partners-text {
+            max-width: 90%;
+            margin-top: 20px;
+        }
+
+            .partners-text p {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+    }
+
+
+    /* ===== شاشات صغيرة (موبايل) ===== */
+    @@media (max-width: 576px) {
+        /* ===== عنوان Success Stories ===== */
+        .success-title {
+            font-size: 28px;
+            line-height: 1.4;
+            display: block; /* يسمح بالكسر للسطر الثاني */
+            white-space: normal; /* يتيح كسر النص */
+            text-align: center;
+        }
+
+            .success-title span {
+                font-size: 32px;
+                display: block; /* كلمة Yours في سطر مستقل */
+                margin-top: 8px;
+                white-space: normal;
+            }
+        /* ===== Partners Section ===== */
+        .partners-title {
+            max-width: 90%; /* تقريباً ملء الشاشة مع ترك مسافة */
+            padding: 12px;
+        }
+
+            .partners-title h4 {
+                font-size: 18px;
+            }
+
+        .partners-text {
+            max-width: 90%;
+            margin-top: 20px;
+        }
+
+            .partners-text p {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        /* ===== الكروت ===== */
+        .feature-item {
+            padding: 20px !important;
+            border-radius: 30px !important;
+            text-align: center;
+        }
+        /* ===== قسم الصور والشهادات ===== */
+        .d-flex.justify-content-around.align-items-center.flex-wrap {
+            flex-direction: column !important;
+        }
+
+            .d-flex.justify-content-around.align-items-center.flex-wrap img {
+                width: 100% !important;
+                max-width: 300px;
+            }
+            /* إخفاء الفاصل العمودي */
+            .d-flex.justify-content-around.align-items-center.flex-wrap > div[style*="background-color:white"] {
+                display: none;
+            }
+        /* ===== logos ===== */
+        .logos img {
+            width: 120px !important;
+            margin: 5px;
+        }
+        /* ===== قسم الأسئلة ===== */
+        .row.g-0.align-items-center.justify-content-end {
+            margin-left: 0 !important;
+        }
+
+        .accordion-button {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .accordion-body {
+            font-size: 13px;
+        }
+    }
+
+
+    @@media (max-width: 576px) {
+        .responsive-btn {
+            width: 300px !important; /* حجم أصغر للموبايل */
+            font-size: 13px !important; /* خط أصغر */
+            padding: 8px 12px !important; /* تقليل الـ padding */
+        }
+        /* جعل الأزرار في النص */
+        .buttons-container {
+            flex-direction: column !important; /* ترتيب عمودي على الموبايل */
+            align-items: center !important; /* توسيط العناصر أفقيًا */
+        }
+    }
+
+    .feature {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/CompetencyInside.jpg) left center no-repeat;
+        background-size: cover;
+        background-position: left center;
+        min-height: 500px; /* ارتفاع مناسب */
+        display: flex;
+        align-items: center;
+        border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
+    }
+</style>
+
+
+
+<!-- About Start -->
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Success Stories</h1>
+    </div>
+</div>
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+
+
+
+<div class="text-center p-5">
+    <div class="mx-auto">
+        <h1 class="success-title">
+            Our Success is Measured by
+            <span>Yours</span>
+        </h1>
+    </div>
+</div>
+
+
+
+
+<!-- Features Start -->
+<div class="container-fluid  pb-6 pt-3" style="background: linear-gradient(to right, #4579bd 0%, #f3df29 50%, #4579bd 100%);">
+    <!-- العنوان -->
+    <div class="partners-title border border-5 border-yellow p-4 text-center mt-4">
+        <h4 class="lh-base text-uppercase mb-0">Partners & Accreditations</h4>
+    </div>
+
+    <!-- النص -->
+    <div class="partners-text text-center mt-5">
+        <p>
+            We believe in the power of collaboration. Our strategic partnerships with leading national
+            and international bodies allow us to provide our clients with world-class services,
+            global standards, and unparalleled expertise.
+        </p>
+    </div>
+    <div class="pt-4 mx-auto" style="max-width:1600px;">
+        <div class="row g-4">
+            <!-- g-4 = مسافات بين الكروت -->
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-item border  d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
+                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
+                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    </div>
+                    <h5 class="text-uppercase text-white mb-4">Tma</h5>
+                    <p class="flex-grow-1" style="color:white">
+                        TMA Method conducts more than 200.000 assessments a year and develops clients offering them new insights into their personality, talents, competencies and career options. TMA has an innovative method based on a positive philosophy. We offer reliable online tools, dashboards, reports, and HR analytics with which you can run the process of talent and competency management easily and effectively.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-item border  d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
+                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
+                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    </div>
+                    <h5 class="text-uppercase text-white mb-4">GXPZONE Pharma Solutions Pvt.Ltd</h5>
+                    <p class=" flex-grow-1" style="color:white">
+                        Complete product solution provider in the field of pharmaceuticals, in product development, world wide Regulatory submission and Quality Assurance, Quality and compliance and Life Cycle management for developed markets like US, Canada, Europe, Australia, New Zealand to merging markets Asia, Africa, Middle East, Latam, CIS.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-item border  d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
+                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
+                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    </div>
+                    <h5 class="text-uppercase text-white mb-4">gradar - the job evaluation engine</h5>
+                    <p class=" flex-grow-1" style="color:white">
+                        Is a web-based application for analytical job evaluation which is easy to use, affordable and delivers transparent results.
+                    </p>
+                </div>
+            </div>
+
+            <!-- الصف الثاني - الكارت الأول -->
+            <div class="col-md-6 col-lg-4 offset-lg-2">
+                <div class="feature-item border d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
+                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
+                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    </div>
+                    <h5 class="text-uppercase text-white mb-4">
+                        Al-Mayadin (Institute for Training ®)
+                    </h5>
+                    <p class=" flex-grow-1" style="color:white">
+                        As a specialized, national training institute provide a number of diverse and wide range training programs to meet the training needs for both public and private sectors to effectively help raise the efficiency of their staff.
+                    </p>
+                </div>
+            </div>
+
+            <!-- الصف الثاني - الكارت الثاني -->
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-item border  d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
+                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
+                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    </div>
+                    <h5 class="text-uppercase text-white mb-4">elite house (Dar El-Nokhba)</h5>
+                    <p class=" flex-grow-1" style="color:white">
+                        Our Yemen partnership with Dar El-Nokhba.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+
+
+
+
+<div class="text-center " style="margin-top:100px; margin-bottom:50px;">
+    <h1 class="text-dark">Committed to the Highest Standards of Quality</h1>
+</div>
+
+<div class=" text-center p-5" style="background: radial-gradient(circle, #f3df29, #000000);">
+    <div class="d-flex justify-content-around align-items-center flex-wrap">
+        <!-- العمود الأول -->
+        <div class="text-center me-4">
+            <img src="~/img/certificate_page-0001.jpg" style="width:500px;" />
+            <p class="p-3 " style="color:white;">
+                Our commitment to excellence is not just a promise; it's certified. <br />
+                These accreditations guarantee that our processes and services <br />
+                meet the highest national and international quality standards.
+            </p>
+        </div>
+
+        <!-- Divider عمودي -->
+        <div style="width:10px; height:500px; background-color:white;"></div>
+
+        <!-- العمود الثاني -->
+        <div class="text-center ms-4">
+            <img src="~/img/certificate_page-0002.jpg" style="width:500px;" />
+            <p class="p-3" style="color:white;">
+                Our training programs are fully accredited by the NQI,<br />
+                ensuring that your team receives the highest quality,<br />
+                most impactful development available in the market.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@* logos Start *@
+
+
+<div class=" h-100 my-5">
+    <div class="row align-items-center h-100">
+        <div class="container rounded">
+            <h1 class="text-center text-dark" style="margin-top:50px;margin-bottom:100px;">Trusted by Industry Leaders</h1>
+            <div class="slider">
+
+                <div class="logos">
+                    <img src="~/Logos/C LOGO-01.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-02.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-03.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-04.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-05.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-06.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-07.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-08.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-09.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-11.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-12.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-13.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-14.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-15.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-16.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-17.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-18.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-19.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-21.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-22.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-23.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-24.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-25.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-26.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-27.png" width="200" class="mx-1" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@* logos End *@
+
+
+<section class="pt-6 pb-6  text-center" style="background: radial-gradient(circle, #f3df29, #000000); margin-top:100px; margin-bottom:50px;">
+    <div class="container">
+        <!-- العنوان -->
+        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+
+        <!-- خط فاصل مع أيقونة -->
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            @* <i class="bi bi-flower1 text-info fs-3"></i> *@
+            <img src="~/favicon.png" style="width:30px;" />
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+        </div>
+
+        <!-- النص -->
+        <p class="mb-4" style="color:white">
+            Contact Us today and let’s make your vision a compliant, sustainable reality.
+        </p>
+
+        <!-- الأزرار -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-info text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
+                Explore Our Solutions  <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-info  text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
+                Contact Us to Be Partner  <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="text-center mb-5">
+    <h1>Your Questions, Answered</h1>
+</div>
+
+<div class="container-fluid feature mt-3 mb-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-0 align-items-center justify-content-end" style="margin-left:200px;">
+
+            <!-- قسم الأسئلة مع padding داخلي -->
+            <div class="col-md-7">
+                <div class="p-5">
+                    <!-- هنا أضفنا البادينج -->
+                    <div class="accordion mt-5" id="basicAccordion">
+
+                        <!-- السؤال الاول -->
+                        <div class="accordion-item w-100">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button"
+                                        data-mdb-toggle="collapse" data-mdb-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                    What industries do you specialize in?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                 aria-labelledby="headingOne" data-mdb-parent="#basicAccordion">
+                                <div class="accordion-body">
+                                    <strong>
+                                        While we have deep roots and extensive expertise in the Pharmaceutical and Food industries,
+                                        our services have been successfully implemented across a wide range of sectors including
+                                        Banking, Hospitality, Engineering, and IT.
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- باقي الأسئلة -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button"
+                                        data-mdb-toggle="collapse" data-mdb-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                    What makes your Salary Survey different from global competitors like Mercer?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                 aria-labelledby="headingTwo" data-mdb-parent="#basicAccordion">
+                                <div class="accordion-body">
+                                    <strong>
+                                        Our salary survey is uniquely tailored to the Egyptian market. While global surveys provide a broad overview,
+                                        our 12 years of focused local data offer a much more granular, accurate, and relevant benchmark
+                                        for making competitive compensation decisions within Egypt.
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button"
+                                        data-mdb-toggle="collapse" data-mdb-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                    How do you ensure the confidentiality of our data during projects?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                 aria-labelledby="headingThree" data-mdb-parent="#basicAccordion">
+                                <div class="accordion-body">
+                                    <strong>
+                                        Confidentiality is paramount in everything we do.
+                                        All projects are governed by a strict Non-Disclosure Agreement (NDA).
+                                        Our internal processes and systems are designed to ensure your sensitive information
+                                        is handled with the utmost security and discretion.
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button"
+                                        data-mdb-toggle="collapse" data-mdb-target="#collapseFour"
+                                        aria-expanded="false" aria-controls="collapseFour">
+                                    Can your services be customized to fit the needs of a small or medium-sized enterprise (SME)?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                 aria-labelledby="headingFour" data-mdb-parent="#basicAccordion">
+                                <div class="accordion-body">
+                                    <strong>
+                                        Absolutely. We understand that every business is unique.
+                                        We pride ourselves on our ability to customize our services —
+                                        from training programs to restructuring projects —
+                                        to fit the specific needs, budget, and scale of SMEs.
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts {
+
+    @*  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" /> *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+
+}

@@ -1,0 +1,480 @@
+﻿
+@{
+    ViewData["Title"] = "Service";
+}
+<style>
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    pre {
+        font-family: inherit; /* نفس الخط بتاع p */
+        font-size: inherit; /* نفس حجم الخط */
+        line-height: inherit; /* نفس التباعد */
+        white-space: pre-wrap; /* عشان يكسر السطر زي p */
+        word-wrap: break-word; /* يمنع خروج النص برا */
+        margin: 0; /* زي p */
+    }
+
+
+     section.last-section {
+        background: radial-gradient(circle, #f3df29, #000000);
+        margin-bottom: 50px;
+        text-align: center;
+        padding: 50px 15px;
+    }
+
+    section.last-section h2 {
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    section.last-section p {
+        color: white;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    section.last-section .divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    section.last-section .divider hr {
+        border-top: 5px solid #fff;
+        opacity: 0.5;
+        width: 200px;
+        margin: 0;
+    }
+
+    section.last-section .divider img {
+        width: 30px;
+    }
+
+    section.last-section .btn-custom {
+        width: 350px;
+        font-size: 15px;
+        padding: 12px 20px;
+    }
+
+    /* التابلت */
+    @@media (max-width: 992px) {
+        section.last-section h2 {
+            font-size: 1.8rem;
+        }
+
+        section.last-section .divider hr {
+            width: 150px;
+        }
+
+        section.last-section .btn-custom {
+            width: 300px;
+        }
+    }
+
+    /* الموبايل */
+    @@media (max-width: 576px) {
+        section.last-section {
+            padding: 40px 10px;
+        }
+
+        section.last-section h2 {
+            font-size: 1.5rem;
+            line-height: 1.4;
+        }
+
+        section.last-section .divider {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        section.last-section .divider hr {
+            width: 80%;
+        }
+
+        section.last-section .btn-custom {
+            width: 100%;
+        }
+
+        section.last-section .d-flex {
+            flex-direction: column !important;
+            gap: 15px;
+        }
+    }
+
+
+
+    .responsive-title {
+    font-size: 48px;
+    line-height: 1.3;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.responsive-title span {
+    color: #4579bd;
+    font-family: 'Calisto MT';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 60px;
+    white-space: nowrap;
+}
+
+/* للشاشات المتوسطة */
+@@media (max-width: 992px) {
+    .responsive-title {
+        font-size: 36px;
+    }
+
+    .responsive-title span {
+        font-size: 48px;
+    }
+}
+
+/* للشاشات الصغيرة مثل الموبايل */
+@@media (max-width: 576px) {
+    .responsive-title {
+        font-size: 28px;
+        line-height: 1.4;
+        display: block;
+        white-space: normal; /* عشان يسمح بالكسر */
+    }
+
+    .responsive-title span {
+        font-size: 36px;
+        display: block; /* يخلي كلمة Challenges تنزل في سطر جديد */
+        margin-top: 10px;
+        white-space: normal;
+    }
+}
+
+    @@media (max-width: 576px) {
+        .responsive-btn {
+            width: 300px !important; /* حجم أصغر للموبايل */
+            font-size: 13px !important; /* خط أصغر */
+            padding: 8px 12px !important; /* تقليل الـ padding */
+        }
+        /* جعل الأزرار في النص */
+        .buttons-container {
+            flex-direction: column !important; /* ترتيب عمودي على الموبايل */
+            align-items: center !important; /* توسيط العناصر أفقيًا */
+        }
+    }
+
+    /*** Features ***/
+    .feature {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/CompetencyInside.jpg) left center no-repeat;
+        background-size: cover;
+        background-position: left center;
+        min-height: 500px; /* ارتفاع مناسب */
+        display: flex;
+        align-items: center;
+        border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
+    }
+
+</style>
+
+<!-- About Start -->
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Our Services</h1>
+    </div>
+</div>
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+
+
+
+<div class="text-center p-5">
+    <div class="mx-auto">
+        <h1 class="responsive-title">
+            Integrated Solutions for Your Toughest HR
+            <span>Challenges</span>
+        </h1>
+        <pre style="font-size: 18px; line-height: 1.6; margin-top: 15px; font-size:20px;">
+At Resources One, we don't offer one-size-fits-all solutions. We provide a comprehensive suite of integrated services,
+each designed to address a specific challenge in your organization's lifecycle. From attracting top talent to ensuring
+   legal compliance and developing your team's skills, our services work in harmony to drive your business forward. Explore
+   our areas of expertise below.
+        </pre>
+    </div>
+</div>
+
+
+<!-- Service Start -->
+<div class="container-fluid service pt-6 pb-6">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h1 class="display-6  text-dark text-uppercase">Our Services Overview</h1>
+            <h3 class="my-4 text-dark no-wrap">
+                A Comprehensive Suite of HR Solutions Designed for Your Success
+            </h3>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="~/img/competency.jpg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h4 class="text-uppercase">
+                                Competency Assessments
+                            </h4>
+                            <p>
+                                Go beyond resumes and traditional interviews. Base your next hiring and development decisions on objective data and scientific insights that reveal the true potential of your employees and candidates.
+                            </p>
+                        </div>
+                        <a asp-controller="Services" asp-action="CompetencyAssessments" class="btn btn-primary px-3">
+                            Read More<i class="bi bi-chevron-double-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="~/img/Payroll.jpg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h4 class="text-uppercase">
+                                Payroll Outsourcing
+                            </h4>
+                            <p>
+                                You're building your business empire across borders; our mission is to protect your flank in Egypt. Let us handle the complexities of payroll, taxes, and social insurance, so you can manage your team with absolute efficiency and security—as if you had a full-fledged HR department on the ground.
+                            </p>
+                        </div>
+                        <a asp-controller="Services" asp-action="PayrollOutsourcing" class="btn btn-primary px-3">
+                            Read More<i class="bi bi-chevron-double-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="~/img/Corporate.jpg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h4 class="text-uppercase">
+                                B2B Training
+                            </h4>
+                            <p>
+                                In a hyper-competitive market, the smartest investment is in the minds that drive your business. We don't offer conventional training courses; we design customized learning experiences that build skills, foster leadership, and guarantee a tangible return on your human capital investment.
+                            </p>
+                        </div>
+                        <a asp-controller="Services" asp-action="B2BTraining" class="btn btn-primary px-3">
+                            Read More<i class="bi bi-chevron-double-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="~/img/Recruitment.jpg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h4 class="text-uppercase">
+                                Recruitment Services
+                            </h4>
+                            <p>
+                                Every wrong hire costs you time, money, and missed opportunities. Our mission is to transform recruitment from a high-stakes gamble into a strategic investment with guaranteed results, by finding the talent that not only has the skills, but the mindset to drive your success.
+                            </p>
+                        </div>
+                        <a asp-controller="Services" asp-action="RecruitmentServices" class="btn btn-primary px-3">
+                            Read More<i class="bi bi-chevron-double-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="~/img/SalaryServyies.jpg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h4 class="text-uppercase">
+                                Salary Surveys
+                            </h4>
+                            <p>
+                                In a competitive talent market, setting the right compensation is the most critical financial decision you'll make. Relying on guesswork or generic data costs you your best people or drains your budget. We offer you certainty: precise, trusted data from the heart of the Egyptian market, designed to give you a true competitive advantage.
+                            </p>
+                        </div>
+                        <a asp-controller="Services" asp-action="SalarySurveys" class="btn btn-primary px-3">
+                            Read More<i class="bi bi-chevron-double-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="~/img/Governce.jpg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h4 class="text-uppercase">
+                                Governance & Restructuring
+                            </h4>
+                            <p>
+                                Growth doesn't happen by chance; it happens by design. In today's fast-paced business environment, a flexible organizational structure and clear policies are not just an advantage—they are a necessity for survival and growth. We help you engineer the robust organizational foundation that empowers your team, accelerates decision-making, and unlocks your company's full potential.
+                            </p>
+                        </div>
+                        <a asp-controller="Services" asp-action="GovernanceRestructuring" class="btn btn-primary px-3">
+                            Read More<i class="bi bi-chevron-double-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <div class="service-inner pb-5">
+                        <img class="img-fluid w-100" src="~/img/Technical.jpg" alt="">
+                        <div class="service-text px-5 pt-4">
+                            <h4 class="text-uppercase">
+                                Technical Education Initiative
+                            </h4>
+                            <p>
+                                At the heart of every successful factory lies a skilled and committed technical team. But finding them is the greatest challenge. We offer you a radical solution: a pioneering national initiative, in partnership with the Ministry of Education, to provide you with a new generation of skilled technicians, prepared and trained specifically to meet your operational needs.
+                            </p>
+                        </div>
+                        <a asp-controller="Services" asp-action="TechnicalEducationInitiative" class="btn btn-primary px-3">
+                            Read More<i class="bi bi-chevron-double-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Service End -->
+<div class="container-fluid feature mt-6 mb-6 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-0 justify-content-end">
+            <div class="col-lg-6 pt-5">
+                <div class="mt-5">
+                    <h1 class="display-6 text-white text-uppercase mb-4 wow fadeIn" data-wow-delay="0.3s">Why Resources One ?</h1>
+                    <p class="text-light mb-4 wow fadeIn" data-wow-delay="0.4s">
+                        Your success is our focus. We don't just offer services; we build partnerships.
+                    </p>
+
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-shield-check text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">18+ Years of Flawless Compliance </h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>We have managed payroll for over 1,000 employees with a zero-legal-issue record. Your peace of mind is our priority.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-globe2 text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Exclusive International Partnerships</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>As the sole agent for TMA in Egypt, we provide you with globally recognized tools that grant you a real competitive advantage.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-bar-chart-line text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Data-Driven Insights</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>With 12 years of experience conducting salary surveys, our consulting is backed by unparalleled market data.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4 pt-2 mb-4">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="flex-column text-center border border-5 border-primary p-5">
+                                <h1 class="text-white" data-toggle="counter-up">167</h1>
+                                <p class="text-white text-uppercase mb-0">Satisfied Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="flex-column text-center border border-5 border-primary p-5">
+                                <h1 class="text-white" data-toggle="counter-up">9999</h1>
+                                <p class="text-white text-uppercase mb-0">Complete Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-5 border-primary border-bottom-0 p-5">
+                        <div class="experience mb-4 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-white text-uppercase">Experience</span>
+                                <span class="text-white">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="experience wow fadeIn" data-wow-delay="0.7s">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="text-white text-uppercase">Work Done</span>
+                                <span class="text-white">95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95"
+                                     aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="last-section">
+    <div class="container">
+        <!-- العنوان -->
+        <h2 class="fw-bold mb-3">Ready to empower your workforce and drive your business forward?</h2>
+
+        <!-- خط فاصل مع أيقونة -->
+        <div class="divider">
+            <hr>
+            <img src="~/favicon.png" alt="icon" />
+            <hr>
+        </div>
+
+        <!-- النص -->
+        <p>Contact Us today and let’s make your vision a compliant, sustainable reality.</p>
+
+        <!-- الأزرار -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3">
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-info text-white responsive-btn rounded-pill btn-custom">
+                Contact Us for Consultation <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+            <a asp-controller="Home" asp-action="About" class="btn btn-info text-white responsive-btn rounded-pill btn-custom">
+                View Our Story <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+

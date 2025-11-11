@@ -1,0 +1,247 @@
+﻿@using System.Text.RegularExpressions
+@model InsightsHubPageViewModel
+@{
+    ViewData["Title"] = "InsightsHub";
+}
+
+<style>
+    html, body {
+        overflow-x: hidden;
+    }
+</style>
+
+
+<!-- About Start -->
+
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Insights Hub</h1>
+    </div>
+</div>
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+
+@if (User.IsInRole("Admin"))
+{
+    <div class="text-center">
+        <a class="btn btn-primary" asp-controller="Home" asp-action="CreateBlogAndSendEmailToSubscribers">Create Blog</a>
+    </div>
+}
+
+
+
+<div class="container my-5">
+    <h2 class="mb-4 text-center">Latest News</h2>
+    <div class="row g-4">
+        @foreach (var item in Model.News)
+        {
+            <!-- الكارد الأول -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
+                    <!-- الصورة -->
+                    <img src="~/Images/@item.ImageName" class="card-img-top" alt="SEO">
+
+                    <div class="card-body">
+                        <!-- العنوان -->
+                        <h5 class="card-title fw-bold mb-3">
+                            @item.Title
+                        </h5>
+
+                        <!-- النص -->
+                        @*   <p class="card-text text-muted">
+                            @(item.Body.Length > 100 ? item.Body.Substring(0, 100) + " ..." : item.Body)
+                        </p>
+ *@                     
+
+                         <p class="card-text text-muted">
+                            @{
+                                // إزالة الوسوم HTML من النص
+                                var plainText = Regex.Replace(item.Body, "<.*?>", string.Empty);
+
+                                // عمل ملخص من 100 حرف فقط
+                                var summary = plainText.Length > 100
+                                ? plainText.Substring(0, 100) + " ..."
+                                : plainText;
+                            }
+                            @summary
+                        </p>
+                        <!-- زر -->
+                        <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Read More</a>
+                    </div>
+
+                    <!-- الفوتر -->
+                    <div class="card-footer bg-white d-flex justify-content-between align-items-center small text-muted">
+                        <div>
+                            <i class="bi bi-calendar-event"></i> @item.CreatedDate.ToString("dd MMM yyyy")
+                        </div>
+                        <div>
+                            @item.Category
+                            <i class="bi bi-person"></i> <small class="fw-bold">@item.Publisher</small>
+                        </div>
+
+                    </div>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div class="card-footer bg-white border-0">
+                            <a class="btn btn-warning btn-sm"
+                               asp-controller="Home" asp-action="UpdateInsightsHub" asp-route-id="@item.Id">Update</a>
+                            <a class="btn btn-danger btn-sm"
+                               asp-controller="Home" asp-action="DeleteInsightsHub" asp-route-id="@item.Id">Delete</a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        }
+    </div>
+
+    <!-- Pagination for News -->
+    <div class="d-flex justify-content-center mt-4">
+        <nav aria-label="News pagination">
+            <ul class="pagination">
+
+                <!-- Previous -->
+                <li class="page-item @(Model.NewsPageNumber == 1 ? "disabled" : "")">
+                    <a class="page-link"
+                       asp-action="InsightsHub"
+                       asp-route-newsPageNumber="@(Model.NewsPageNumber - 1)"
+                       asp-route-blogsPageNumber="@Model.BlogsPageNumber"
+                       aria-label="Previous">
+                        Previous
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                <!-- Page Numbers -->
+                @for (int i = 1; i <= Model.NewsTotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.NewsPageNumber ? "active" : "")">
+                        <a class="page-link"
+                           asp-action="InsightsHub"
+                           asp-route-newsPageNumber="@i"
+                           asp-route-blogsPageNumber="@Model.BlogsPageNumber">
+                            @i
+                        </a>
+                    </li>
+                }
+
+                <!-- Next -->
+                <li class="page-item @(Model.NewsPageNumber == Model.NewsTotalPages ? "disabled" : "")">
+                    <a class="page-link"
+                       asp-action="InsightsHub"
+                       asp-route-newsPageNumber="@(Model.NewsPageNumber + 1)"
+                       asp-route-blogsPageNumber="@Model.BlogsPageNumber"
+                       aria-label="Next">
+                        Next
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <hr class="my-5" />
+
+    <h2 class="mb-4 text-center"> Latest Articles</h2>
+    <div class="row g-4">
+        @foreach (var item in Model.Blogs)
+        {
+            <!-- الكارد الأول -->
+            <div class="col-md-3 col-sm-6">
+                <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
+                    <!-- الصورة -->
+                    <img src="~/Images/@item.ImageName" class="card-img-top" alt="SEO">
+
+                    <div class="card-body">
+                        <!-- العنوان -->
+                        <h5 class="card-title fw-bold mb-3">
+                            @item.Title
+                        </h5>
+
+                        <!-- النص -->
+                        <p class="card-text text-muted">
+                            @item.Body
+                        </p>
+
+                        <!-- زر -->
+                        <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Read More</a>
+                    </div>
+
+                    <!-- الفوتر -->
+                    <div class="card-footer bg-white d-flex justify-content-between align-items-center small text-muted">
+                        <div>
+                            <i class="bi bi-calendar-event"></i> @item.CreatedDate.ToString("dd MMM yyyy")
+                        </div>
+                        <div>
+                            @item.Category
+                            <i class="bi bi-person"></i> <small class="fw-bold">@item.Publisher</small>
+                        </div>
+
+                    </div>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div class="card-footer bg-white border-0">
+                            <a class="btn btn-warning btn-sm"
+                               asp-controller="Home" asp-action="UpdateInsightsHub" asp-route-id="@item.Id">Update</a>
+                            <a class="btn btn-danger btn-sm"
+                               asp-controller="Home" asp-action="DeleteInsightsHub" asp-route-id="@item.Id">Delete</a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        }
+    </div>
+    <!-- Pagination for Blogs -->
+    <div class="d-flex justify-content-center mt-4">
+        <nav aria-label="Blogs pagination">
+            <ul class="pagination">
+
+                <!-- Previous -->
+                <li class="page-item @(Model.BlogsPageNumber == 1 ? "disabled" : "")">
+                    <a class="page-link"
+                       asp-action="InsightsHub"
+                       asp-route-blogsPageNumber="@(Model.BlogsPageNumber - 1)"
+                       asp-route-newsPageNumber="@Model.NewsPageNumber"
+                       aria-label="Previous">
+                        Previous
+                    </a>
+                </li>
+
+                <!-- Page Numbers -->
+                @for (int i = 1; i <= Model.BlogsTotalPages; i++)
+                {
+                    <li class="page-item @(i == Model.BlogsPageNumber ? "active" : "")">
+                        <a class="page-link"
+                           asp-action="InsightsHub"
+                           asp-route-blogsPageNumber="@i"
+                           asp-route-newsPageNumber="@Model.NewsPageNumber">
+                            @i
+                        </a>
+                    </li>
+                }
+
+                <!-- Next -->
+                <li class="page-item @(Model.BlogsPageNumber == Model.BlogsTotalPages ? "disabled" : "")">
+                    <a class="page-link"
+                       asp-action="InsightsHub"
+                       asp-route-blogsPageNumber="@(Model.BlogsPageNumber + 1)"
+                       asp-route-newsPageNumber="@Model.NewsPageNumber"
+                       aria-label="Next">
+                        Next
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+
+</div>

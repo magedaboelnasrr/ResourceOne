@@ -1,0 +1,294 @@
+﻿
+@{
+    ViewData["Title"] = "RecruitmentServices";
+}
+
+<style>
+    html, body {
+        overflow-x: hidden;
+    }
+    .custom-heading {
+        font-size: 2.5rem; /* نفس حجم الـ h1 الافتراضي */
+        font-weight: bold;
+    }
+
+    @@media (max-width: 576px) {
+        .responsive-btn {
+            width: 300px !important; /* حجم أصغر للموبايل */
+            font-size: 13px !important; /* خط أصغر */
+            padding: 8px 12px !important; /* تقليل الـ padding */
+        }
+        /* جعل الأزرار في النص */
+        .buttons-container {
+            flex-direction: column !important; /* ترتيب عمودي على الموبايل */
+            align-items: center !important; /* توسيط العناصر أفقيًا */
+        }
+    }
+    /* في الموبايل فقط يظهر */
+    @@media (max-width: 767px) {
+        .mobile-break
+
+    {
+        display: inline;
+    }
+
+    h2.custom-heading span {
+        white-space: normal !important; /* يسمح بالنزول للسطر */
+        font-size: 26px !important; /* تصغير الخط للموبايل */
+    }
+
+    }
+</style>
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Recruitment Services</h1>
+    </div>
+</div>
+
+
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+
+
+<div class="container my-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <img src="~/img/competency.jpg" class="w-100" style="height:500px; border-radius:50px;" />
+        </div>
+        <div class="col-md-6 text-center">
+            <h2 class="my-5 custom-heading">
+                Hiring Isn't Just Filling a Vacancy. It's Building
+                <span style="color: #4579bd; font-family:'Calisto MT'; font-style: italic; font-weight: 700; font-size:45px; white-space: nowrap;" class="mobile-break">
+                    Your Company's Future.
+                </span>
+            </h2>
+
+            <p>Every wrong hire costs you time, money, and missed opportunities. Our mission is to transform recruitment from a high-stakes gamble into a strategic investment with guaranteed results, by finding the talent that not only has the skills, but the mindset to drive your success.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="text-center" style="margin-top: 200px;">
+    <h1>Does the Current Hiring Landscape Seem Frustrating? You're Not Alone.</h1>
+
+</div>
+
+<div class="container">
+    <h5 style="margin:20px;" class="text-primary">As a business leader, your time is your most valuable asset. Yet, the traditional hiring process consumes it relentlessly.<br /> Are you facing any of these challenges?</h5>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <br />
+
+            <ul>
+                <li><strong>CV Overload:</strong> Spending countless hours sifting through hundreds of unqualified resumes to find just one potential candidate.</li>
+                <li><strong>Candidates Who Don't Measure Up:</strong> Interviewing applicants who look perfect on paper, only to discover they lack the soft skills or cultural fit to succeed in your environment.</li>
+                <li><strong>A Slow Process:</strong> Losing the best candidates to your competitors because your hiring process is too long and complex.</li>
+                <li>
+                    <strong>The Cost of a Bad Hire:</strong> Dealing with the hidden costs of low productivity, the impact on team morale, and the need to start the entire process all over again.
+                    Our mission is to end this exhaustive cycle. We don't just find you employees; we find you partners in success.
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/competency.jpg" class="w-100" style="height:300px; border-radius:50px;" />
+        </div>
+        <div class="text-center my-5">
+            <h4 class="text-primary">Our mission is to end this exhaustive cycle. We don't just find you employees; we find you partners in success.</h4>
+        </div>
+    </div>
+
+
+</div>
+
+<hr class="mb-5" />
+
+<div class="container">
+    <h1 class="text-center mt-5">How We Turn the Search for Talent into a Precise Science.</h1>
+
+    <div class="row">
+        <div class="text-center my-3">
+            <strong>We combine unparalleled reach with scientific depth to offer you more than just a list of candidates. Here's our competitive edge:</strong>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">Unmatched Access: The Power of Our Network</strong>
+                <p class="my-3">
+                    We don't start our search from scratch. We start from a proprietary database of over 70,000 resumes of distinguished Egyptian professionals. Our dedicated team of 12 specialized researchers, two supervisors, and a manager doesn't wait for candidates to apply; they leverage this vast network and advanced sourcing tools to proactively reach the best talent.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">Scientific Selection: Beyond the Resume</strong>
+                <p class="my-3">
+                    This is the advantage that puts us in a class of our own. We don't just rely on impressions. We can integrate the recruitment process with:
+                </p>
+               <div class="text-start">
+                    <ul>
+                        <li>Certified Competency Assessments (TMA).</li>
+                        <li>Proprietary Salary Survey Data: To help you design a competitive and fair job offer.</li>
+                    </ul>
+               </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">Speed and Efficiency: A Process Designed for Your Success</strong>
+                <p style="margin-top: 15px;">
+                    Our structured team operates like a well-oiled machine. Our specific goal for 2025 is to place 700 positions, a target built on our proven ability to deliver qualified, pre-assessed shortlists in record time, giving you the speed advantage in a competitive talent market.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* <div class="container mt-5">
+    <div class="row">
+        <div class="text-center">
+            <h2>From Deep Understanding to a Successful Hire:  <span class="text-primary" style="font-family:'Calisto MT';font-style:italic">Our 4-Step Methodology</span> </h2>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/infograph.jpg" style="height:400px; width:400px;" />
+        </div>
+        <div class="col-md-6">
+            <h5 class="text-primary mt-3">We follow a transparent process designed to ensure you're always informed and that every candidate we present has been thoroughly vetted.</h5>
+            <p>1- <strong>Strategic Alignment Session:</strong> We begin with an in-depth session with you to understand not just the job requirements, but your company's soul, team goals, and the long-term success factors.</p>
+            <p>2- <strong>Advanced Sourcing & Vetting:</strong> We activate our vast network and direct sourcing tools to reach both active and passive candidates (those not actively looking but open to the right opportunity).</p>
+            <p>3- <strong>In-depth Assessment & Interviewing:</strong> Our team conducts behavioral and structured interviews. We can add a layer of scientific assessments to deliver a shortlist of candidates who are already verified for their competence.</p>
+            <p>4- <strong>Presentation & Offer Management:</strong> We provide you with a comprehensive profile for each shortlisted candidate, complete with our insights and analysis. We also assist in managing the offer process to ensure a smooth and positive candidate experience.</p>
+        </div>
+    </div>
+</div>
+ *@
+
+
+
+
+<!-- Features Start -->
+<div class="container-fluid feature mt-5 mb-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-0 justify-content-end">
+            <div class="col-lg-6 pt-4">
+                <div>
+                    <h5 class=" text-white text-uppercase fadeIn" data-wow-delay="0.3s">
+                        From Deep Understanding to a Successful Hire: Our 4-Step Methodology
+                    </h5>
+                    <p class="text-light mb-4 wow fadeIn" data-wow-delay="0.4s">
+                        We follow a transparent process designed to ensure you're always informed and that every candidate we present has been thoroughly vetted.
+                    </p>
+
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-shield-check text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Strategic Alignment Session:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>We begin with an in-depth session with you to understand not just the job requirements, but your company's soul, team goals, and the long-term success factors.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-globe2 text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Advanced Sourcing & Vetting:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>We activate our vast network and direct sourcing tools to reach both active and passive candidates (those not actively looking but open to the right opportunity).</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-bar-chart-line text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">In-depth Assessment & Interviewing:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>Our team conducts behavioral and structured interviews. We can add a layer of scientific assessments to deliver a shortlist of candidates who are already verified for their competence.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-bar-chart-line text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Presentation & Offer Management:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>We provide you with a comprehensive profile for each shortlisted candidate, complete with our insights and analysis. We also assist in managing the offer process to ensure a smooth and positive candidate experience.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features End -->
+
+
+
+
+<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+    <div class="container">
+        <!-- العنوان -->
+        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+
+        <!-- خط فاصل مع أيقونة -->
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            @* <i class="bi bi-flower1 text-info fs-3"></i> *@
+            <img src="~/favicon.png" style="width:30px;" />
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+        </div>
+
+        <!-- النص -->
+        <p class="mb-4" style="color:white">
+            Contact Us today and let’s make your vision a compliant, sustainable reality.
+        </p>
+
+        <!-- الأزرار -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-primary text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
+                Explore Our Services <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary responsive-btn text-white rounded-pill" style="width:300px; font-size:15px;" target="_blank">
+                Visit our Candidates' Portal <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+

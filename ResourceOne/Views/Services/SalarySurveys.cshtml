@@ -1,0 +1,259 @@
+﻿
+@{
+    ViewData["Title"] = "SalarySurveys";
+}
+
+<style>
+    html, body {
+        overflow-x: hidden;
+    }
+    .custom-heading {
+        font-size: 2.5rem; /* نفس حجم الـ h1 الافتراضي */
+        font-weight: bold;
+    }
+    @@media (max-width: 576px) {
+        .responsive-btn {
+            width: 300px !important; /* حجم أصغر للموبايل */
+            font-size: 13px !important; /* خط أصغر */
+            padding: 8px 12px !important; /* تقليل الـ padding */
+        }
+        /* جعل الأزرار في النص */
+        .buttons-container {
+            flex-direction: column !important; /* ترتيب عمودي على الموبايل */
+            align-items: center !important; /* توسيط العناصر أفقيًا */
+        }
+    }
+</style>
+
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Salary Surveys</h1>
+    </div>
+</div>
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+<div class="container my-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <img src="~/img/competency.jpg" class="w-100" style=" height:500px; border-radius:50px;" />
+        </div>
+        <div class="col-md-6 text-center">
+            <h2 class="my-5 custom-heading">Are Your <span style="font-family:'Calisto MT';font-style:italic;font-size:50px;" class="text-primary">Salary Decisions</span>  an Investment or a Gamble?</h2>
+            <p> In a competitive talent market, setting the right compensation is the most critical financial decision you'll make. Relying on guesswork or generic data costs you your best people or drains your budget. We offer you certainty: precise, trusted data from the heart of the Egyptian market, designed to give you a true competitive advantage.</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="text-center" style="margin-top: 200px;">
+    <h1>Every Day Without Accurate Data, You Risk One of These Hidden Costs</h1>
+
+</div>
+
+<div class="container">
+    <h5 style="margin:20px;" class="text-primary">Does any of this sound familiar?</h5>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <br />
+
+            <ul>
+                <li>Losing Key Talent: Your best performers leave for a competitor who offered just a slightly better package, because you didn't know the true market rate.</li>
+                <li>Overspending on Payroll: You're paying above-market rates for certain positions, eroding your profit margins without seeing a real return in productivity.</li>
+                <li>Internal Inequity: You discover unjustified pay gaps between employees at the same level, damaging morale and creating a toxic work environment.</li>
+                <li>Struggling to Attract Top Candidates: Your job offers consistently fail to attract high-caliber professionals because they don't align with current market expectations.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/competency.jpg" class="w-100" style="height:300px; border-radius:50px;" />
+        </div>
+        <div class="text-center my-5">
+            <h4 class="text-primary">These aren't just operational headaches; they are strategic risks <br /> The solution is to replace uncertainty with data.</h4>
+        </div>
+    </div>
+
+
+</div>
+
+<hr class="mb-5" />
+
+<div class="container">
+    <h1 class="text-center mt-5">Why Have Market Leaders Trusted Our Data for 12 Years?</h1>
+
+    <div class="row">
+        <div class="text-center my-3">
+            <strong>When it comes to salary data, nothing is more important than trust and relevance. Here’s what makes our surveys the gold standard in Egypt:</strong>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">A National Benchmark Built on Trust, Not a Re-purposed Global Report</strong>
+                <p class="my-3">
+                    For 12 years, we have built an impeccable reputation as the most reliable data source
+                    in the Egyptian market. We don't just adapt global templates; we collect and analyze
+                    data from the leading companies here in Egypt, ensuring every figure reflects the local
+                    reality with unparalleled accuracy.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">Unmatched Sector-Specific Depth: Specialists in Your Industry</strong>
+                <p class="my-3">
+                    We understand that the compensation structure in a pharmaceutical company is fundamentally different from a tech firm. That’s why we offer 3 specialized, independent surveys:
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">Rigorous Methodology and an Expert Team</strong>
+                <p style="margin-top:35px;">
+                    Our data is more than just a collection of numbers. Our team of expert analysts validates the data, standardizes job titles, and analyzes trends to deliver a report that gives you not just data, but actionable insights.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* <div class="container mt-5">
+    <div class="row">
+        <div class="text-center">
+            <h1>From Participation to Decision-Making: <span class="text-primary" style="font-family:'Calisto MT';font-style:italic">A Journey to Certainty</span> </h1>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/infograph.jpg" style="height:400px; width:400px;" />
+        </div>
+        <div class="col-md-6">
+            <h5 class="text-primary mt-3">Our process is designed to be seamless, confidential, and to deliver maximum value back to you.</h5>
+            <p>1- Easy & Secure Participation: We invite you to participate in the survey through a secure platform that guarantees the absolute confidentiality of your company's data.</p>
+            <p>2- Meticulous Analysis & Calibration: Our team processes the aggregated data, applying certified statistical methodologies to ensure accuracy and eliminate outliers.</p>
+            <p>3- Comprehensive & Customized Report: You receive a detailed report containing in-depth analysis of basic salaries, variable pay, and total benefits, with clear benchmarks of your company's position in the market.</p>
+            <p>4- Consultative Session (Optional): We can hold a session with you to discuss the report's findings and help you translate the data into effective compensation strategies.</p>
+        </div>
+    </div>
+</div>
+ *@
+
+
+
+<!-- Features Start -->
+<div class="container-fluid feature mt-5 mb-3 wow fadeIn p-3" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-0 justify-content-end">
+            <div class="col-lg-6 pt-4">
+                <div>
+                    <h5 class=" text-white text-uppercase fadeIn" data-wow-delay="0.3s">
+                        From Participation to Decision-Making: A Journey to Certainty
+                    </h5>
+                    <p class="text-light mb-4 wow fadeIn" data-wow-delay="0.4s">
+                        Our process is designed to be seamless, confidential, and to deliver maximum value back to you.
+                    </p>
+
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-shield-check text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Easy & Secure Participation:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>We invite you to participate in the survey through a secure platform that guarantees the absolute confidentiality of your company's data.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-globe2 text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white"> Meticulous Analysis & Calibration:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>Our team processes the aggregated data, applying certified statistical methodologies to ensure accuracy and eliminate outliers.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-bar-chart-line text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Comprehensive & Customized Report:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>You receive a detailed report containing in-depth analysis of basic salaries, variable pay, and total benefits, with clear benchmarks of your company's position in the market.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-bar-chart-line text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Consultative Session (Optional):</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>We can hold a session with you to discuss the report's findings and help you translate the data into effective compensation strategies.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features End -->
+
+
+
+<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+    <div class="container">
+        <!-- العنوان -->
+        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+
+        <!-- خط فاصل مع أيقونة -->
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            @* <i class="bi bi-flower1 text-info fs-3"></i> *@
+            <img src="~/favicon.png" style="width:30px;" />
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+        </div>
+
+        <!-- النص -->
+        <p class="mb-4" style="color:white">
+            Contact Us today and let’s make your vision a compliant, sustainable reality.
+        </p>
+
+        <!-- الأزرار -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 buttons-container">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-primary text-white responsive-btn  rounded-pill" style="width:300px; font-size:15px;">
+                Explore Our Services <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary  responsive-btn text-white rounded-pill" style="width:300px; font-size:15px;" target="_blank">
+                Visit our Candidates' Portal <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>

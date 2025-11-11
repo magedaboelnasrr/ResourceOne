@@ -1,0 +1,95 @@
+﻿@model BlogViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+<style>
+    html, body {
+        overflow-x: hidden;
+    }
+    pre {
+        font-family: inherit; /* نفس الخط بتاع p */
+        font-size: inherit; /* نفس حجم الخط */
+        line-height: inherit; /* نفس التباعد */
+        white-space: pre-wrap; /* عشان يكسر السطر زي p */
+        word-wrap: break-word; /* يمنع خروج النص برا */
+        margin: 0; /* زي p */
+    }
+
+    .blog-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+</style>
+
+
+
+<div class="text-center">
+    <h1>Details</h1>
+</div>
+
+
+
+<div class="container my-5">
+    <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <!-- الصورة الرئيسية -->
+        <img src="~/Images/@Model.ImageName" class="w-100" style="max-height:500px; object-fit:cover;" alt="@Model.Title">
+
+        <div class="card-body">
+            <!-- العنوان -->
+            <h2 class="fw-bold mb-3">@Model.Title</h2>
+
+            <!-- التاريخ + الكاتب -->
+            <p class="text-muted small mb-4">
+                <i class="bi bi-calendar-event"></i> @Model.CreatedDate.ToString("dd MMM yyyy")
+                &nbsp; | &nbsp;
+                <i class="bi bi-person"></i> <b>@Model.Publisher</b>
+                &nbsp; | &nbsp;
+                <span class="badge bg-secondary">@Model.Category</span>
+            </p>
+
+            <!-- المحتوى -->
+            <div class="blog-content">
+                @Html.Raw(Model.Body)
+            </div>
+        </div>
+    </div>
+    <div class="mt-3">
+        <a asp-action="InsightsHub" class="btn btn-outline-primary">⬅ Back to list</a>
+    </div>
+</div>
+
+
+<div class="mt-5 container">
+    <h4>Comments (@Model.Comments.Count)</h4>
+
+    <!-- عرض التعليقات -->
+    @if (Model.Comments.Any())
+    {
+        <ul class="list-group mb-4">
+            @foreach (var comment in Model.Comments)
+            {
+                <li class="list-group-item">
+                    <b>@comment.UserName</b>
+                    <span class="text-muted small">(@comment.CreatedAt.ToString("dd MMM yyyy HH:mm"))</span>
+                    <p class="mb-0">@comment.Content</p>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="text-muted">No comments yet.</p>
+    }
+
+    <!-- إضافة تعليق جديد -->
+    <form asp-action="AddComment" method="post" class="card p-3">
+        <input type="hidden" name="BlogId" value="@Model.Id" />
+        <div class="mb-3">
+            <label class="form-label">Comment</label>
+            <textarea name="Content" class="form-control" rows="3" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Comment</button>
+    </form>
+</div>

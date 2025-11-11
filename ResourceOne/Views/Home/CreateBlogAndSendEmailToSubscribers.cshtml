@@ -1,0 +1,60 @@
+﻿@model  BlogViewModel
+@{
+    ViewData["Title"] = "CreateBlogAndSendEmailToSubscribers";
+}
+
+<div class="text-center">
+    <h1>Create Blog</h1>
+</div>
+
+<div class="container">
+    <form asp-controller="Home" asp-action="CreateBlogAndSendEmailToSubscribers" method="post" enctype="multipart/form-data">
+      
+         <label>Title</label>        
+        <input type="text" class="form-control" asp-for="Title" required />
+        <br />
+        <label>Paragraph</label>
+        <textarea id="Body" class="form-control" asp-for="Body" rows="10" required></textarea>
+        <br />
+        <label>Created Date</label>
+        <input type="date" class="form-control" asp-for="CreatedDate" required />
+        <br />
+        <label>Publisher</label>
+        <input type="text" class="form-control" asp-for="Publisher" required />
+        <br />
+        <label>Category</label>
+        <select class="form-control" asp-for="Category">
+            <option value="">-- Select Category --</option>
+            <option value="News">News</option>
+            <option value="blogs">Blogs</option>
+        </select>
+        <br />
+        <label>Upload Image</label>
+        <input type="file" class="form-control" asp-for="Image"  required/>
+        <br />
+        <input type="submit" value="submit" class="btn btn-primary" />
+    </form>
+</div>
+
+@section Scripts{
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+
+   <script>
+    ClassicEditor
+        .create(document.querySelector('#Body'), {
+            ckfinder: {
+                uploadUrl: '/Home/UploadImage' // API في السيرفر لرفع الصور
+            },
+            toolbar: [
+                'heading', '|',
+                'bold', 'italic', 'underline', '|',
+                'link', 'imageUpload', 'blockQuote', 'numberedList', 'bulletedList', '|',
+                'undo', 'redo'
+            ]
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+
+}

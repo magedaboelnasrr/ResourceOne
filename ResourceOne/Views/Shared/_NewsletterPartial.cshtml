@@ -1,0 +1,22 @@
+﻿@model ResourceOne.Models.NewsLetter
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="col-lg-3 col-md-6">
+    <h5 class="text-uppercase text-light" style="margin-top:70px;color:lightgray;">NewsLetter</h5>
+    <p style="color:lightgray">
+        Subscribe to our newsletter and receive the latest news about our products and services!
+
+    </p>
+    <!-- Email Subscribe -->
+    <form asp-controller="Home" asp-action="NewsLetter" method="post">
+        <div class="d-flex">
+            <input type="email" class="form-control  me-2" asp-for="Email" style="border-radius:10px;" id="mail" placeholder="Your Email">
+            <button class="btn btn-primary " type="submit" style="border-radius:10px;">Subscribe</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,246 @@
+﻿
+@{
+    ViewData["Title"] = "PayrollOutsourcing";
+}
+
+<style>
+    html, body {
+        overflow-x: hidden;
+    }
+    .table-overlay {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+        border-radius: 10px;
+        overflow: hidden;
+        color: white;
+    }
+
+    .custom-heading {
+        font-size: 2.5rem; /* نفس حجم الـ h1 الافتراضي */
+        font-weight: bold;
+    }
+
+
+
+    @@media (max-width: 576px) {
+        .responsive-btn {
+            width: 350px !important; /* حجم أصغر للموبايل */
+            font-size: 13px !important; /* خط أصغر */
+            padding: 8px 12px !important; /* تقليل الـ padding */
+        }
+        /* جعل الأزرار في النص */
+        .buttons-container {
+            flex-direction: column !important; /* ترتيب عمودي على الموبايل */
+            align-items: center !important; /* توسيط العناصر أفقيًا */
+        }
+    }
+
+    @@media (max-width: 767px) {
+        h2 .custom-heading span
+
+    {
+        font-size: 24px !important; /* الحجم المناسب للموبايل */
+        white-space: normal !important; /* يسمح للكلام ينزل على سطرين */
+    }
+
+    h2.custom-heading {
+        font-size: 20px !important; /* كمان نضبط العنوان الأساسي */
+        line-height: 1.4;
+        padding: 0 10px; /* عشان الكلام ما يلزقش في أطراف الشاشة */
+    }
+
+    }
+
+    /* إخفاء كسر السطر في الشاشات الكبيرة */
+    .mobile-break {
+        display: none;
+    }
+
+    /* إظهاره فقط في الموبايل */
+    @@media (max-width: 767px) {
+        .mobile-break
+
+    {
+        display: inline;
+    }
+
+    h2.custom-heading span {
+        white-space: normal !important; /* عشان يسمح بالنزول لسطر جديد */
+        font-size: 24px !important; /* تصغير الخط كمان للموبايل */
+    }
+
+    }
+</style>
+
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Payroll Outsourcing</h1>
+    </div>
+</div>
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+
+
+<div class="container my-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <img src="~/img/competency.jpg" class="w-100" style="height:500px; border-radius:50px;" />
+        </div>
+        <div class="col-md-6 text-center">
+            <h2 class="my-5 custom-heading"><span style="color: #4579bd; font-family:'Calisto MT'; font-style: italic; font-weight: 700; font-size:45px; white-space: nowrap;" class="mobile-break">Managing a Team in Egypt?</span><br /> We Guarantee Full Compliance and Peace of Mind</h2>
+            <p> You're building your business empire across borders; our mission is to protect your flank in Egypt. Let us handle the complexities of payroll, taxes, and social insurance, so you can manage your team with absolute efficiency and security—as if you had a full-fledged HR department on the ground.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="text-center" style="margin-top: 200px;">
+    <h1>We Know What Concerns You When Managing a Team in Egypt...</h1>
+
+</div>
+
+<div class="container">
+    <h5 style="margin:20px;" class="text-primary">Does any of this sound familiar?</h5>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <br />
+
+            <p>You're a director or business owner in Saudi Arabia or the UAE with an ambitious vision and a deep understanding of the market. You've selected Egypt's top talent to help you achieve that vision. However, with this opportunity comes a set of complex challenges that consume your time and focus:</p>
+            <ul>
+                <li><strong>Egyptian Labor Law:</strong> Are you 100% certain that your employment contracts comply with the latest amendments? What about leave entitlements, overtime hours, or termination procedures?</li>
+                <li><strong>Taxes and Social Insurance:</strong> Is payroll tax calculated accurately and filed on time? Are your employees correctly registered for social insurance to avoid retroactive penalties?</li>
+                <li><strong>Local Bureaucracy:</strong> Who is handling the procedures with the labor and social insurance offices? Who ensures all official paperwork is correct and submitted on schedule?</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/competency.jpg" class="w-100" style="height:350px; border-radius:50px;" />
+        </div>
+        <div class="text-center my-5">
+            <h4 class="text-primary">Every one of these questions represents a risk. We are here to reduce those risks to zero.</h4>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="container text-center my-5">
+    <h2 class="text-primary my-4">Consider Us Your In-House HR Department in Cairo</h2>
+
+    <p>
+        Resources One's Payroll Outsourcing service is more than just number crunching.
+        We act as your strategic <br /> arm on the ground, handling every intricate detail with unmatched precision.
+    </p>
+
+    <div>
+        <table class="table table-bordered text-center my-5 table-overlay" style="font-size: 1.2rem;">
+            <thead>
+                <tr class="text-white" >
+                    <th style="width: 50%; padding: 20px; font-size:25px;">Your Mission</th>
+                    <th style="width: 50%; padding: 20px; font-size:25px;">Our Mission</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 25px;">Focus on Your Growth Strategy</td>
+                    <td style="padding: 25px;">Manage Monthly Payroll with Flawless Accuracy</td>
+                </tr>
+                <tr>
+                    <td style="padding: 25px;">Lead Your Team to Success</td>
+                    <td style="padding: 25px;">Handle All Payroll Tax Obligations</td>
+                </tr>
+                <tr>
+                    <td style="padding: 25px;">Expand Your Business in the Region</td>
+                    <td style="padding: 25px;">Oversee Social Insurance Files Completely</td>
+                </tr>
+                <tr>
+                    <td style="padding: 25px;">Achieve Your Commercial Goals</td>
+                    <td style="padding: 25px;">Ensure Full Compliance with Egyptian Labor Law</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="container " style="margin-top:100px;">
+    <div class="row">
+        <div class="text-center">
+            <h1>Peace of Mind Guaranteed: The Advantage <span class="text-primary" style="font-family:'Calisto MT';font-style:italic">Our Competitors Can't Offer</span> </h1>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/infograph.jpg" style="height:400px; width:400px;" />
+        </div>
+        <div class="col-md-6">
+            <h5 class=" mt-3">In the world of digital payroll services, you might find platforms offering you software and apps. But we offer you something far more valuable: <span class="text-primary">Absolute security built on unparalleled experience.</span></h5>
+            <p class="mt-3">
+                <strong> 1. Our Track Record Speaks for Itself: 18 Years of Flawless Compliance.</strong> <br />
+                Imagine managing payroll for over 1,000 employees for various companies over 18 years <strong>without a single legal issue</strong>. This isn't luck; it's the result of a rigorous system, a team of legal experts, and a deep understanding of the Egyptian market's nuances. This is the Resources One guarantee that gives you complete peace of mind.
+
+            </p>
+            <p>
+                <strong>2. Proactive Advisors, Not Just Processors:</strong> <br />
+                With the new labor law on the horizon, many see uncertainty. We see an opportunity. Our team doesn't wait for regulations to be issued; we proactively analyze them and provide you with consultations to optimize your contracts and structures for the future, protecting you from any surprises.
+            </p>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+    <div class="container">
+        <!-- العنوان -->
+        <h2 class="fw-bold mb-3" style="color:white">Transform Team Management in Egypt into an Advantage</h2>
+
+        <!-- خط فاصل مع أيقونة -->
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            @* <i class="bi bi-flower1 text-info fs-3"></i> *@
+            <img src="~/favicon.png" style="width:30px;" />
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+        </div>
+
+        <!-- النص -->
+        <p class="mb-4" style="color:white">
+            Invest your time in leading your business, and let us invest our expertise in protecting it. Book a free, no-obligation consultation <br /> with one of our experts today
+        </p>
+
+        <!-- الأزرار -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3">
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary text-white responsive-btn rounded-pill" style="width:450px; padding:15px; font-size:15px;">
+                Book Your Strategic Consultation Now <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+           
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+@section Scripts {
+
+    @*  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" /> *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+
+}

@@ -1,0 +1,264 @@
+﻿
+@{
+    ViewData["Title"] = "TechnicalEducationInitiative";
+}
+
+<style>
+    html, body {
+        overflow-x: hidden;
+    }
+    .custom-heading {
+        font-size: 2.5rem; /* نفس حجم الـ h1 الافتراضي */
+        font-weight: bold;
+    }
+
+    @@media (max-width: 576px) {
+        .responsive-btn {
+            width: 300px !important; /* حجم أصغر للموبايل */
+            font-size: 13px !important; /* خط أصغر */
+            padding: 8px 12px !important; /* تقليل الـ padding */
+        }
+        /* جعل الأزرار في النص */
+        .buttons-container {
+            flex-direction: column !important; /* ترتيب عمودي على الموبايل */
+            align-items: center !important; /* توسيط العناصر أفقيًا */
+        }
+    }
+</style>
+
+
+<div class="position-relative text-center">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+
+    <!-- النص فوق الصورة (أسفل يسار) -->
+    <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
+        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Technical Education Initiative</h1>
+    </div>
+</div>
+
+
+
+<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+</div>
+
+
+
+<div class="container my-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <img src="~/img/competency.jpg" class="w-100" style="height:500px; border-radius:50px;" />
+        </div>
+        <div class="col-md-6 text-center ">
+            <h2 class="my-5 custom-heading">Are You Looking for Technicians to  <span style="color: #4579bd; font-family:'Calisto MT'; font-style: italic; font-weight: 700; font-size:45px; white-space: nowrap;">Execute the Present</span> <br /> or Partners to Craft the <span style="color: #4579bd; font-family:'Calisto MT'; font-style: italic; font-weight: 700; font-size:45px; white-space: nowrap;">Future?</span> </h2>
+            <p>At the heart of every successful factory lies a skilled and committed technical team. But finding them is the greatest challenge. We offer you a radical solution: a pioneering national initiative, in partnership with the Ministry of Education, to provide you with a new generation of skilled technicians, prepared and trained specifically to meet your operational needs.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="text-center" style="margin-top: 200px;">
+    <h2 class="custom-heading">"Technical turnover is high"... "Graduates need retraining"... "Commitment is low"</h2>
+
+</div>
+
+<div class="container">
+    <h5 style="margin:20px;" class="text-primary">Do these challenges sound like part of your daily reality? You are not alone. Industry leaders constantly face:</h5>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <br />
+
+            <ul>
+                <li><strong>The Practical Skills Gap:</strong> Graduates possess theoretical knowledge but lack the hands-on, practical experience required by a modern work environment.</li>
+                <li><strong>High Employee Turnover:</strong> You invest valuable time and resources training new technicians, only to lose them shortly after to a competitor or another opportunity.</li>
+                <li><strong>Difficulty Instilling a Culture of Commitment:</strong> Building a strong work ethic and discipline among new graduates is a constant challenge that impacts production quality.</li>
+                <li><strong>Exorbitant Recruitment and Training Costs:</strong> The process of sourcing, screening, training, and qualifying new talent drains resources that could have been directed toward growth and development.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/competency.jpg" class="w-100" style="height:300px; border-radius:50px;" />
+        </div>
+        <div class="text-center my-5">
+            <h4 class="text-primary">Trying to solve these problems with traditional methods is a losing battle. It's time to embrace a new model.</h4>
+        </div>
+    </div>
+
+
+</div>
+
+<hr class="mb-5" />
+
+<div class="container">
+    <h2 class="text-center custom-heading mt-5">A One-of-a-Kind Initiative in Egypt: The Strategic Solution Others Don't Have</h2>
+
+    <div class="row">
+        <div class="text-center my-3">
+            <strong>This is not just another recruitment service; it is an innovative, integrated ecosystem designed to guarantee you access to the best technical talent. Here’s what makes us the only choice:</strong>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">Official Partnership with the Ministry of Education</strong>
+                <p class="my-3">
+                    We work directly with the source of talent. This exclusive partnership gives us unprecedented access to the most promising students in technical schools and ensures the entire educational and training process is conducted under official government supervision and support. This adds a layer of commitment and credibility that no other entity can provide.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">Quality Assurance Through a Tripartite Evaluation Committee</strong>
+                <p class="text-center">
+                    This Tripartite Committee is our core strength. Each student is assessed by three parties: The Ministry of Education (for academic standards), Your Company/Client (for operational fit), and Resources One (for process management). This unique mechanism guarantees graduates are not only skilled but also disciplined, committed, and perfectly tailored for your work environment.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="~/img/competency.jpg" class="w-100" />
+            <div class="text-center mt-3">
+                <strong class="text-primary  my-3">Custom-Designed, Sector-Specific Programs</strong>
+                <p style="margin-top:20px;">
+                    We understand that the needs of a pharmaceutical plant differ from those of a food factory. We work closely with you to design practical and theoretical training programs that are fully customized to your sector's requirements, ensuring students acquire the exact skills you need from day one.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* <div class="container mt-5">
+    <div class="row">
+        <div class="text-center">
+            <h2>From Promising Student to Productive Technician: The Talent-Building Journey <span class="text-primary" style="font-family:'Calisto MT';font-style:italic"></span> </h2>
+        </div>
+        <div class="col-md-6">
+            <img src="~/img/infograph.jpg" style="height:400px; width:400px;" />
+        </div>
+        <div class="col-md-6">
+            <h5 class="text-primary my-3">Our process is designed to be transparent, effective, and deliver the highest return on your investment.</h5>
+            <p>1- <strong>Meticulous Talent Selection:</strong> In collaboration with the Ministry, we screen and select the most promising students who demonstrate both passion and a capacity for learning.</p>
+            <p>2- <strong>Dual Training (Theoretical & Practical):</strong> Students undergo an intensive training program that combines theoretical studies at school with extensive hands-on training inside your factories.</p>
+            <p>3- <strong>Continuous Evaluation & Follow-up:</strong> The Tripartite Evaluation Committee regularly monitors each student's performance, providing guidance and support to ensure they stay on the right track.</p>
+            <p>4- <strong>Hiring & Seamless Integration:</strong> Upon successful completion of the program, the student becomes a fully integrated employee, ready for production and already equipped with your company's culture.</p>
+        </div>
+    </div>
+</div> *@
+
+
+<!-- Features Start -->
+<div class="container-fluid feature mt-5 mb-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-0 justify-content-end">
+            <div class="col-lg-6 pt-4">
+                <div>
+                    <h5 class=" text-white text-uppercase fadeIn" data-wow-delay="0.3s">
+                        From Promising Student to Productive Technician: The Talent-Building Journey
+                    </h5>
+                    <p class="text-light mb-4 wow fadeIn" data-wow-delay="0.4s">
+                        Our process is designed to be transparent, effective, and deliver the highest return on your investment.
+                    </p>
+
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-shield-check text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Meticulous Talent Selection:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p> In collaboration with the Ministry, we screen and select the most promising students who demonstrate both passion and a capacity for learning.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-globe2 text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Dual Training (Theoretical & Practical):</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>Students undergo an intensive training program that combines theoretical studies at school with extensive hands-on training inside your factories.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-bar-chart-line text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Continuous Evaluation & Follow-up:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>The Tripartite Evaluation Committee regularly monitors each student's performance, providing guidance and support to ensure they stay on the right track.</p>
+                        </div>
+                    </div>
+                    <div class="row g-0 align-items-center">
+                        <!-- الأيقونة + العنوان -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="btn-lg-square bg-white me-3">
+                                <i class="bi bi-bar-chart-line text-dark fs-3"></i>
+                            </div>
+                            <h5 class="mb-0 text-white">Hiring & Seamless Integration:</h5>
+                        </div>
+
+                        <!-- البراجراف تحت -->
+                        <div class="col-12 mt-2">
+                            <p>Upon successful completion of the program, the student becomes a fully integrated employee, ready for production and already equipped with your company's culture.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features End -->
+
+
+
+
+
+<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+    <div class="container">
+        <!-- العنوان -->
+        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+
+        <!-- خط فاصل مع أيقونة -->
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            @* <i class="bi bi-flower1 text-info fs-3"></i> *@
+            <img src="~/favicon.png" style="width:30px;" />
+            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+        </div>
+
+        <!-- النص -->
+        <p class="mb-4" style="color:white">
+            Contact Us today and let’s make your vision a compliant, sustainable reality.
+        </p>
+
+        <!-- الأزرار -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 buttons-container">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-primary text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
+                Explore Our Services <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary  responsive-btn text-white rounded-pill" style="width:300px; font-size:15px;" target="_blank">
+                Visit our Candidates' Portal <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
