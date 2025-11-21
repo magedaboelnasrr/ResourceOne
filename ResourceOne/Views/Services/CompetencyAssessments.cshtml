@@ -5,6 +5,7 @@
     html, body {
         overflow-x: hidden;
     }
+
     .custom-heading {
         font-size: 2.5rem; /* نفس حجم الـ h1 الافتراضي */
         font-weight: bold;
@@ -22,22 +23,68 @@
             align-items: center !important; /* توسيط العناصر أفقيًا */
         }
     }
+
+    body {
+        background-color: #fff;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .sub-title {
+        font-weight: 600;
+    }
+
+    .check-item::before {
+        content: "☑ ";
+        color: #000;
+    }
+
+    ul.custom-list {
+        list-style-type: disc;
+        margin-left: 1.5rem;
+    }
+
+    .section-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .highlight {
+        color: #0056b3;
+        font-weight: 600;
+    }
+
+    .logo {
+        max-width: 180px;
+        height: auto;
+    }
+
+    .feature {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/competncyCover.jpg) left center no-repeat;
+        background-size: cover;
+        background-position: left center;
+        min-height: 500px; /* ارتفاع مناسب */
+        display: flex;
+        align-items: center;
+        border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
+    }
+
 </style>
 
 
 <div class="position-relative text-center">
-    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/competency.webp" alt="Image">
 
     <!-- النص فوق الصورة (أسفل يسار) -->
     <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
-        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Competency Assessments</h1>
+        <h1 class="fw-bold display-4 mb-3 text-primary">Competency Assessments</h1>
     </div>
 </div>
 
-<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
+@* <div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
 </div>
-
-<div class="container my-5" >
+ *@
+@* <div class="container my-5" >
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
             <img src="~/img/competency.jpg" class="w-100" style=" height:500px; border-radius:50px;" />
@@ -53,13 +100,44 @@
         </div>
 
     </div>
+</div> *@
+
+
+<div class="container my-5">
+
+    <div class="mb-4">
+        <h5 class="section-title">Smarter Hiring &amp; Stronger Teams <em>Secure Future</em></h5>
+        <p class="check-item">Go beyond resumes and traditional interviews. Base your next hiring and development decisions on objective data and scientific insights that reveal the true potential of your employees and candidates.</p>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">Are You Still Hiring Based on a "Gut Feeling"?</h5>
+        <ul class="custom-list">
+            <li>In today's competitive job market, a bad hiring decision can cost up to three times an employee's annual salary.</li>
+            <li>Relying solely on interviews opens the door to unconscious bias, hides true competencies, and often leads to a poor cultural fit, causing high turnover and weak performance.</li>
+        </ul>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">The Solution: Data-Driven Competency Assessments, Welcome to the Era of Smart Talent Decisions</h5>
+        <p class="check-item"><em>Resources One's</em> Competency Assessment service is the strategic solution that moves your decisions from guesswork to certainty.</p>
+        <p class="check-item">We use internationally accredited tools and techniques to analyze and measure behavioral competencies, cognitive abilities, and the hidden talents of individuals, giving you a complete and objective picture to make better decisions in:</p>
+
+        <ul class="custom-list">
+            <li><span class="sub-title">Selection &amp; Hiring:</span> Choose the best candidate for the job and your company culture.</li>
+            <li><span class="sub-title">Career Development &amp; Hiring:</span> Identify the strengths and development areas of your current employees.</li>
+            <li><span class="sub-title">Succession Planning:</span> Recognize the future leaders within your organization.</li>
+            <li><span class="sub-title">Building High-Performing Teams:</span> Create harmonious teams with complementary skills.</li>
+        </ul>
+    </div>
 </div>
 
 
 
-<div class="text-center" style="margin-top: 200px;">
+
+@* <div class="text-center" style="margin-top: 200px;">
     <h1>The Solution: Data-Driven Competency Assessments</h1>
-    
+
 </div>
 
 <div class="container">
@@ -69,14 +147,14 @@
     <div class="row">
         <div class="col-md-6">
             <br />
-            
+
             <p>Resources One's Competency Assessment service is the strategic solution that moves your decisions from guesswork to certainty. We use internationally accredited tools and techniques to analyze and measure behavioral competencies, cognitive abilities, and the hidden talents of individuals, giving you a complete and objective picture to make better decisions in:</p>
             <ul>
                 <li> <strong>Selection & Hiring:</strong> Choose the best candidate for the job and your company culture.</li>
                 <li> <strong>Career Development & Hiring:</strong> Identify the strengths and development areas of your current employees.</li>
                 <li> <strong>Succession Planning:</strong> Recognize the future leaders within your organization.</li>
                 <li> <strong>Building High-Performing Teams:</strong> Create harmonious teams with complementary skills.</li>
-              
+
             </ul>
         </div>
         <div class="col-md-6">
@@ -87,21 +165,70 @@
         </div>
     </div>
 
-   
+
+</div> *@
+
+<hr class="mb-5" />
+
+
+<div class="container py-5">
+
+    <!-- Section Header -->
+    <div class="mb-4">
+        <h5 class="section-title">Our Methodology: Global Power with Local Expertise</h5>
+        <h6 class="highlight">How Do We Guarantee Accurate and Reliable Results?</h6>
+        <p>
+            We don't just use any assessment tool; we select the world's best and apply them with our deep expertise in the Egyptian market.
+            Our methodology is based on strict international standards that ensure precision and reliability.
+        </p>
+    </div>
+
+    <!-- TMA Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-4 text-center">
+            <img src="~/img/tma.png" alt="TMA Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Exclusive Partnership with TMA Method (Netherlands)</h6>
+            <p>
+                We are the exclusive agent in Egypt for the TMA Method.
+                It's not just an assessment tool; it's a positive philosophy focused on discovering the strengths and natural talents of individuals.
+                Instead of searching for weaknesses, we help you hire and develop people in roles that align with their innate talents,
+                leading to a massive increase in job satisfaction and productivity.
+            </p>
+        </div>
+    </div>
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Accredited by Thomas International (UK)</h6>
+            <p>
+                We use the prestigious Thomas tools for workplace behavior analysis.
+                This gives us a complete view of how individuals communicate their strengths, their motivators, and how they will behave under pressure,
+                ensuring a perfect fit with job requirements and team dynamics.
+            </p>
+        </div>
+    </div>
+
 </div>
 
-<hr class="mb-5"/>
 
+
+@* 
 <div class="container">
     <h1 class="text-center mt-5">Our Methodology: Global Power with Local Expertise</h1>
-    
+
     <div class="row">
-       <div class="text-center my-3">
+        <div class="text-center my-3">
             <h5 class="text-primary">How Do We Guarantee Accurate and Reliable Results?</h5>
             <p>We don't just use any assessment tool; we select the world's best and apply them with our deep expertise in the Egyptian market. Our methodology is based on strict international standards that ensure precision and reliability.</p>
-       </div>
+        </div>
         <div class="col-md-6">
-            <img  src="~/img/competency.jpg" class="w-100" style="border-radius:50px;"/>
+            <img src="~/img/competency.jpg" class="w-100" style="border-radius:50px;" />
             <div class="text-center mt-3">
                 <strong class="text-primary  my-3">Exclusive Partnership with TMA Method (Netherlands) </strong>
                 <p class="my-3">
@@ -110,17 +237,17 @@
             </div>
         </div>
         <div class="col-md-6">
-            <img src="~/img/competency.jpg" class="w-100"  style="border-radius:50px;"/>
+            <img src="~/img/competency.jpg" class="w-100" style="border-radius:50px;" />
             <div class="text-center mt-3">
                 <strong class="text-primary  my-3">Accredited by Thomas International (UK)</strong>
                 <p class="my-3">
                     Alongside TMA, we use the prestigious Thomas tools for workplace behavior <br /> analysis. This gives us a complete view of how individuals communicate, <br /> their strengths, their motivators, and how they will behave under pressure, ensuring a perfect fit with job requirements and team dynamics.
                 </p>
             </div>
-        </div>       
+        </div>
     </div>
 </div>
-
+ *@
 
 
 <div class="container-fluid feature wow fadeIn" data-wow-delay="0.1s" style="margin-top:100px; ">
@@ -188,7 +315,7 @@
                         <div class="col-12 mt-2">
                             <p>Promote and develop your staff based on real data, not personal opinions.</p>
                         </div>
-                        
+
                     </div>
                     <div class="row g-0 align-items-center">
                         <!-- الأيقونة + العنوان -->
@@ -216,7 +343,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -228,30 +355,30 @@
 
 
 
-<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+<section class="py-5 my-5  text-center" >
     <div class="container">
         <!-- العنوان -->
-        <h2 class="fw-bold mb-3" style="color:white">Ready to Make the Right Decision?</h2>
+        <h2 class="fw-bold mb-3">Ready to Make the Right Decision?</h2>
 
         <!-- خط فاصل مع أيقونة -->
         <div class="d-flex align-items-center justify-content-center mb-3">
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid #000; opacity: 0.5; width: 200px;">
             @* <i class="bi bi-flower1 text-info fs-3"></i> *@
             <img src="~/favicon.png" style="width:30px;" />
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid #000; opacity: 0.5; width: 200px;">
         </div>
 
         <!-- النص -->
-        <p class="mb-4" style="color:white">
+        <p class="mb-4" >
             Stop leaving your company's most important asset to chance. Contact us today for a free consultation.
         </p>
 
         <!-- الأزرار -->
         <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3 ">
-            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary text-white responsive-btn rounded-pill" style="width:400px; font-size:15px; margin-top:50px; padding:20px;">
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary  responsive-btn rounded-pill" style="width:400px; font-size:15px; margin-top:50px; padding:20px;">
                 Talk to One of Our Experts Now <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
-            
+
         </div>
     </div>
 </section>
