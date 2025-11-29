@@ -24,11 +24,41 @@
             align-items: center !important; /* توسيط العناصر أفقيًا */
         }
     }
+
+    .feature {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/Technical-Education-Initiative-down.png) left center no-repeat;
+        background-size: cover;
+        background-position: left center;
+        min-height: 500px; /* ارتفاع مناسب */
+        display: flex;
+        align-items: center;
+        border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
+    }
+
+    .section-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .check-item::before {
+        content: "☑ ";
+        color: #000;
+    }
+
+    .highlight {
+        color: #0056b3;
+        font-weight: 600;
+    }
+
+    .logo {
+        max-width: 180px;
+        height: auto;
+    }
 </style>
 
 
 <div class="position-relative text-center">
-    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+    <img class="w-100" style=" object-fit:cover;" src="~/img/Technical-Education-Initiative.png" alt="Image">
 
     <!-- النص فوق الصورة (أسفل يسار) -->
     <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
@@ -38,12 +68,8 @@
 
 
 
-<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
-</div>
 
-
-
-<div class="container my-5">
+@* <div class="container my-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
             <img src="~/img/competency.jpg" class="w-100" style="height:500px; border-radius:50px;" />
@@ -54,12 +80,50 @@
         </div>
     </div>
 </div>
+ *@
+
+
+
+
+<div class="container my-5">
+
+    <div class="mb-4">
+        <h5 class="section-title">Are You Looking for Technicians to Execute the Present or Partners to Craft the Future?</h5>
+        <p class="check-item">At the heart of every successful factory lies a skilled and committed technical team. But finding them is the greatest challenge. We offer you a radical solution: a pioneering national initiative, in partnership with the Ministry of Education, to provide you with a new generation of skilled technicians, prepared and trained specifically to meet your operational needs.</p>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">Technical turnover is high"... "Graduates need retraining"... "Commitment is low"</h5>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">Do these challenges sound like part of your daily reality? You are not alone. Industry leaders constantly face:</h5>
+        <p class="check-item"><em>Resources One's</em> Competency Assessment service is the strategic solution that moves your decisions from guesswork to certainty.</p>
+        <p class="check-item">We use internationally accredited tools and techniques to analyze and measure behavioral competencies, cognitive abilities, and the hidden talents of individuals, giving you a complete and objective picture to make better decisions in:</p>
+
+        <ul class="custom-list">
+            <li><strong>The Practical Skills Gap:</strong> Graduates possess theoretical knowledge but lack the hands-on, practical experience required by a modern work environment.</li>
+            <li><strong>High Employee Turnover:</strong> You invest valuable time and resources training new technicians, only to lose them shortly after to a competitor or another opportunity.</li>
+            <li><strong>Difficulty Instilling a Culture of Commitment:</strong> Building a strong work ethic and discipline among new graduates is a constant challenge that impacts production quality.</li>
+            <li><strong>Exorbitant Recruitment and Training Costs:</strong> The process of sourcing, screening, training, and qualifying new talent drains resources that could have been directed toward growth and development.</li>
+        </ul>
+
+        <p class="check-item">Trying to solve these problems with traditional methods is a losing battle. It's time to embrace a new model.</p>
+    </div>
+</div>
 
 
 
 
 
-<div class="text-center" style="margin-top: 200px;">
+
+
+
+
+
+
+
+@* <div class="text-center" style="margin-top: 200px;">
     <h2 class="custom-heading">"Technical turnover is high"... "Graduates need retraining"... "Commitment is low"</h2>
 
 </div>
@@ -88,11 +152,11 @@
     </div>
 
 
-</div>
+</div> *@
 
 <hr class="mb-5" />
 
-<div class="container">
+@* <div class="container">
     <h2 class="text-center custom-heading mt-5">A One-of-a-Kind Initiative in Egypt: The Strategic Solution Others Don't Have</h2>
 
     <div class="row">
@@ -128,6 +192,75 @@
         </div>
     </div>
 </div>
+
+ *@
+
+
+
+
+
+
+<div class="container py-5">
+
+    <!-- Section Header -->
+    <div class="mb-4">
+        <h5 class="section-title">A One-of-a-Kind Initiative in Egypt: The Strategic Solution Others Don't Have</h5>
+        <h6 class="highlight">This is not just another recruitment service; it is an innovative, integrated ecosystem designed to guarantee you access to the best technical talent. Here’s what makes us the only choice:</h6>
+       
+    </div>
+
+    <!-- TMA Section -->
+    <div class="row align-items-center ">
+        <div class="col-md-4 text-center">
+            <img src="~/img/tma.png" alt="TMA Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Official Partnership with the Ministry of Education</h6>
+            <p>
+                We work directly with the source of talent. This exclusive partnership gives us unprecedented access to the most promising students in technical schools and ensures the entire educational and training process is conducted under official government supervision and support. This adds a layer of commitment and credibility that no other entity can provide.
+            </p>
+        </div>
+    </div>
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Quality Assurance Through a Tripartite Evaluation Committee</h6>
+            <p>
+                This Tripartite Committee is our core strength. Each student is assessed by three parties: The Ministry of Education (for academic standards), Your Company/Client (for operational fit), and Resources One (for process management). This unique mechanism guarantees graduates are not only skilled but also disciplined, committed, and perfectly tailored for your work environment.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Custom-Designed, Sector-Specific Programs</h6>
+            <p>
+                We understand that the needs of a pharmaceutical plant differ from those of a food factory. We work closely with you to design practical and theoretical training programs that are fully customized to your sector's requirements, ensuring students acquire the exact skills you need from day one.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 @* <div class="container mt-5">
@@ -232,30 +365,30 @@
 
 
 
-<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+<section class="py-5 my-5  text-center">
     <div class="container">
         <!-- العنوان -->
-        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+        <h2 class="fw-bold mb-3" >Ready To Build The Future?</h2>
 
         <!-- خط فاصل مع أيقونة -->
         <div class="d-flex align-items-center justify-content-center mb-3">
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
             @* <i class="bi bi-flower1 text-info fs-3"></i> *@
             <img src="~/favicon.png" style="width:30px;" />
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
         </div>
 
         <!-- النص -->
-        <p class="mb-4" style="color:white">
+        <p class="mb-4" >
             Contact Us today and let’s make your vision a compliant, sustainable reality.
         </p>
 
         <!-- الأزرار -->
         <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 buttons-container">
-            <a asp-controller="Home" asp-action="Service" class="btn btn-primary text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-primary responsive-btn rounded-pill" style="color:white; width:300px; font-size:15px;">
                 Explore Our Services <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
-            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary  responsive-btn text-white rounded-pill" style="width:300px; font-size:15px;" target="_blank">
+            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary  responsive-btn  rounded-pill" style="color:white; width:300px; font-size:15px;" target="_blank">
                 Visit our Candidates' Portal <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
         </div>

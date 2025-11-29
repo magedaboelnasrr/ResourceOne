@@ -23,10 +23,40 @@
             align-items: center !important; /* توسيط العناصر أفقيًا */
         }
     }
+
+    .feature {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/Governance-Restructuring-down.png) left center no-repeat;
+        background-size: cover;
+        background-position: left center;
+        min-height: 500px; /* ارتفاع مناسب */
+        display: flex;
+        align-items: center;
+        border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
+    }
+
+    .section-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .check-item::before {
+        content: "☑ ";
+        color: #000;
+    }
+
+    .highlight {
+        color: #0056b3;
+        font-weight: 600;
+    }
+
+    .logo {
+        max-width: 180px;
+        height: auto;
+    }
 </style>
 
 <div class="position-relative text-center">
-    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+    <img class="w-100" style="object-fit:cover;" src="~/img/Governance-Restructuring.png" alt="Image">
 
     <!-- النص فوق الصورة (أسفل يسار) -->
     <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
@@ -36,12 +66,10 @@
 
 
 
-<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
-</div>
 
 
 
-<div class="container my-5">
+@* <div class="container my-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
             <img src="~/img/competency.jpg" class="w-100" style="height:500px; border-radius:50px;" />
@@ -52,11 +80,50 @@
         </div>
     </div>
 </div>
+ *@
 
 
 
 
 
+<div class="container my-5">
+
+    <div class="mb-4">
+        <h5 class="section-title"> Is Your Structure Fueling Your Ambition or Holding It Back?</h5>
+        <p class="check-item"> Growth doesn't happen by chance; it happens by design. In today's fast-paced business environment, a flexible organizational structure and clear policies are not just an advantage—they are a necessity for survival and growth. We help you engineer the robust organizational foundation that empowers your team, accelerates decision-making, and unlocks your company's full potential.</p>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">Warning Signs Your Current Structure Has Reached Its Limits</h5>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">Do you feel like your company is working harder but achieving less? These symptoms might be familiar:</h5>
+        <p class="check-item"><em>Resources One's</em> Competency Assessment service is the strategic solution that moves your decisions from guesswork to certainty.</p>
+        <p class="check-item">We use internationally accredited tools and techniques to analyze and measure behavioral competencies, cognitive abilities, and the hidden talents of individuals, giving you a complete and objective picture to make better decisions in:</p>
+
+      
+        <ul class="custom-list">
+            <li><strong>Slow Decision-Making:</strong> Ideas and approvals get stuck in multiple layers of bureaucracy, causing you to lose valuable market opportunities.</li>
+            <li><strong>Role & Responsibility Overlap:</strong> Employees are unclear on who is responsible for what, leading to duplicated efforts, dropped tasks, and frustrated teams.</li>
+            <li><strong>Declining Productivity:</strong> Teams spend more time navigating internal issues and coordinating tasks than focusing on customer service and innovation.</li>
+            <li>
+                <strong>Difficulty Scaling:</strong> Every attempt to grow increases operational chaos, and you feel that your current processes cannot handle the next stage of success.
+            </li>
+        </ul>
+        <p class="check-item">These are not people problems; they are symptoms of an outdated organizational structure. +Ignoring them is like adding new floors to a cracked foundation. </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+@* 
 <div class="text-center" style="margin-top: 200px;">
     <h2 class="custom-heading">Warning Signs Your Current Structure Has Reached Its Limits</h2>
 
@@ -89,9 +156,9 @@
 
 
 </div>
+ *@
 
-<hr class="mb-5" />
-
+@* 
 <div class="container">
     <h1 class="text-center mt-5">International Expertise, Locally Endorsed:<br /> Your Certified Partner for Structural Transformation</h1>
 
@@ -146,6 +213,90 @@
 
     </div>
 </div>
+ *@
+
+
+
+
+<hr class="mb-5" />
+
+
+<div class="container py-5">
+
+    <!-- Section Header -->
+    <div class="mb-5">
+        <h5 class="section-title">International Expertise, Locally Endorsed Your Certified Partner for Structural Transformation</h5>
+        <h6 class="highlight">Restructuring your company is a strategic decision that requires a partner with more than just theoretical knowledge. Here’s what makes our approach unique and trusted:</h6>
+        
+    </div>
+
+    <!-- TMA Section -->
+    <div class="row align-items-center ">
+        <div class="col-md-4 text-center">
+            <img src="~/img/tma.png" alt="TMA Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Accredited Strategic Partnership: Unmatched Credibility</h6>
+            <p>
+                We are not just another consultancy firm; we are an accredited and endorsed partner of two of the most prestigious entities:
+            </p>
+            <div class="text-start">
+                <ul>
+                    <li>The European Bank for Reconstruction and Development (EBRD)</li>
+                    <li>The Federation of Egyptian Industries (FEI)</li>
+                </ul>
+            </div>
+            <p>This partnership means our methodologies and processes have been vetted and approved against the highest international and local standards, giving you absolute confidence in the quality of service you will receive.</p>
+        </div>
+    </div>
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Custom-Designed Solutions, Not Off-the-Shelf Templates</h6>
+            <p>
+                Custom-Designed Solutions, Not Off-the-Shelf Templates<br />
+                ​A generic template can never solve a unique challenge. We start by deeply immersing ourselves in your world to build bespoke solutions. This involves: deep diagnostics of your goals and culture, co-designing the new structure in collaborative workshops, and creating a detailed blueprint that perfectly aligns with your needs. This ensures the final structure is an ideal fit, designed with your company, not just for it.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">A Holistic Approach: Structure, Policies, and People</h6>
+            <p>
+                We believe a successful structure is one that serves its people, not the other way around. Therefore, we don't just draw org charts; we work to:
+            </p>
+
+            <div class="text-start">
+                <ul>
+                    <li>Clarify Roles & Responsibilities (Job Descriptions & KPIs)</li>
+                    <li>Develop & Update Policies & Procedures</li>
+                    <li>Align the Structure with Your Talent Strategy</li>
+                </ul>
+            </div>
+            <p>We connect the company's physical structure with its human capital to ensure the transformation is both sustainable and effective.</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
 
 @* 
 <div class="container mt-5">
@@ -250,30 +401,30 @@
 
 
 
-<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+<section class="py-5 my-5  text-center">
     <div class="container">
         <!-- العنوان -->
-        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+        <h2 class="fw-bold mb-3" >Ready To Build The Future?</h2>
 
         <!-- خط فاصل مع أيقونة -->
         <div class="d-flex align-items-center justify-content-center mb-3">
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
             @* <i class="bi bi-flower1 text-info fs-3"></i> *@
             <img src="~/favicon.png" style="width:30px;" />
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
         </div>
 
         <!-- النص -->
-        <p class="mb-4" style="color:white">
+        <p class="mb-4" >
             Contact Us today and let’s make your vision a compliant, sustainable reality.
         </p>
 
         <!-- الأزرار -->
         <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 buttons-container">
-            <a asp-controller="Home" asp-action="Service" class="btn btn-primary text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-primary  responsive-btn rounded-pill" style="color:white; width:300px; font-size:15px;">
                 Explore Our Services <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
-            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary responsive-btn text-white rounded-pill" style="width:300px; font-size:15px;" target="_blank">
+            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary responsive-btn  rounded-pill" style="color:white; width:300px; font-size:15px;" target="_blank">
                 Visit our Candidates' Portal <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
         </div>

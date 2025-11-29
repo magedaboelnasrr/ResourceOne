@@ -38,10 +38,40 @@
     }
 
     }
+
+    .feature {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/Recruitment-Services-down.png) left center no-repeat;
+        background-size: cover;
+        background-position: left center;
+        min-height: 500px; /* ارتفاع مناسب */
+        display: flex;
+        align-items: center;
+        border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
+    }
+
+    .section-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .check-item::before {
+        content: "☑ ";
+        color: #000;
+    }
+
+    .highlight {
+        color: #0056b3;
+        font-weight: 600;
+    }
+
+    .logo {
+        max-width: 180px;
+        height: auto;
+    }
 </style>
 
 <div class="position-relative text-center">
-    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+    <img class="w-100" style="object-fit:cover;" src="~/img/Recruitment-Services.png" alt="Image">
 
     <!-- النص فوق الصورة (أسفل يسار) -->
     <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
@@ -51,11 +81,18 @@
 
 
 
-<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
-</div>
 
 
 
+
+
+
+
+
+
+
+
+@* 
 <div class="container my-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
@@ -73,11 +110,50 @@
         </div>
     </div>
 </div>
+ *@
 
 
 
 
 
+
+<div class="container my-5">
+
+    <div class="mb-4">
+        <h5 class="section-title">
+            Hiring Isn't Just Filling a Vacancy. It's Building Your Company's Future.
+        </h5>
+        <p class="check-item">Every wrong hire costs you time, money, and missed opportunities. Our mission is to transform recruitment from a high-stakes gamble into a strategic investment with guaranteed results, by finding the talent that not only has the skills, but the mindset to drive your success.</p>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">Does the Current Hiring Landscape Seem Frustrating? You're Not Alone.</h5>
+        
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">As a business leader, your time is your most valuable asset. Yet, the traditional hiring process consumes it relentlessly. Are you facing any of these challenges?</h5>
+        
+
+        <ul class="custom-list">
+            <li><strong>CV Overload:</strong> Spending countless hours sifting through hundreds of unqualified resumes to find just one potential candidate.</li>
+            <li><strong>Candidates Who Don't Measure Up:</strong> Interviewing applicants who look perfect on paper, only to discover they lack the soft skills or cultural fit to succeed in your environment.</li>
+            <li><strong>A Slow Process:</strong> Losing the best candidates to your competitors because your hiring process is too long and complex.</li>
+            <li>
+                <strong>The Cost of a Bad Hire:</strong> Dealing with the hidden costs of low productivity, the impact on team morale, and the need to start the entire process all over again.
+                Our mission is to end this exhaustive cycle. We don't just find you employees; we find you partners in success.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+@* 
 <div class="text-center" style="margin-top: 200px;">
     <h1>Does the Current Hiring Landscape Seem Frustrating? You're Not Alone.</h1>
 
@@ -111,10 +187,22 @@
 
 
 </div>
+ *@
+
+
+
+
+
+
+
+
+
+
+
 
 <hr class="mb-5" />
 
-<div class="container">
+@* <div class="container">
     <h1 class="text-center mt-5">How We Turn the Search for Talent into a Precise Science.</h1>
 
     <div class="row">
@@ -156,6 +244,77 @@
         </div>
     </div>
 </div>
+
+ *@
+
+
+
+
+
+
+
+<div class="container py-5">
+
+    <!-- Section Header -->
+    <div class="mb-4">
+        <h5 class="section-title">How We Turn the Search for Talent into a Precise Science.</h5>
+        <h6 class="highlight">We combine unparalleled reach with scientific depth to offer you more than just a list of candidates. Here's our competitive edge:</h6>
+       
+    </div>
+
+    <!-- TMA Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/tma.png" alt="TMA Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Unmatched Access: The Power of Our Network</h6>
+            <p>
+                We don't start our search from scratch. We start from a proprietary database of over 70,000 resumes of distinguished Egyptian professionals. Our dedicated team of 12 specialized researchers, two supervisors, and a manager doesn't wait for candidates to apply; they leverage this vast network and advanced sourcing tools to proactively reach the best talent.
+            </p>
+        </div>
+    </div>
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Scientific Selection: Beyond the Resume</h6>
+            <p>
+                This is the advantage that puts us in a class of our own. We don't just rely on impressions. We can integrate the recruitment process with:
+            </p>
+            <div class="text-start">
+                <ul>
+                    <li>Certified Competency Assessments (TMA).</li>
+                    <li>Proprietary Salary Survey Data: To help you design a competitive and fair job offer.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- TMA Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-4 text-center">
+            <img src="~/img/tma.png" alt="TMA Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Speed and Efficiency: A Process Designed for Your Success</h6>
+            <p>
+                Our structured team operates like a well-oiled machine. Our specific goal for 2025 is to place 700 positions, a target built on our proven ability to deliver qualified, pre-assessed shortlists in record time, giving you the speed advantage in a competitive talent market.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
 @* <div class="container mt-5">
@@ -262,30 +421,30 @@
 
 
 
-<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+<section class="py-5 my-5  text-center">
     <div class="container">
         <!-- العنوان -->
-        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+        <h2 class="fw-bold mb-3" >Ready To Build The Future?</h2>
 
         <!-- خط فاصل مع أيقونة -->
         <div class="d-flex align-items-center justify-content-center mb-3">
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
             @* <i class="bi bi-flower1 text-info fs-3"></i> *@
             <img src="~/favicon.png" style="width:30px;" />
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
         </div>
 
         <!-- النص -->
-        <p class="mb-4" style="color:white">
+        <p class="mb-4" >
             Contact Us today and let’s make your vision a compliant, sustainable reality.
         </p>
 
         <!-- الأزرار -->
         <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3">
-            <a asp-controller="Home" asp-action="Service" class="btn btn-primary text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-primary  responsive-btn rounded-pill" style="color:white; width:300px; font-size:15px;">
                 Explore Our Services <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
-            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary responsive-btn text-white rounded-pill" style="width:300px; font-size:15px;" target="_blank">
+            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary responsive-btn  rounded-pill" style="color:white; width:300px; font-size:15px;" target="_blank">
                 Visit our Candidates' Portal <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
         </div>

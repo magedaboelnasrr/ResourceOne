@@ -23,21 +23,51 @@
             align-items: center !important; /* توسيط العناصر أفقيًا */
         }
     }
+
+    .feature {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/Salary-Surveys-down.png) left center no-repeat;
+        background-size: cover;
+        background-position: left center;
+        min-height: 500px; /* ارتفاع مناسب */
+        display: flex;
+        align-items: center;
+        border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
+    }
+
+    .section-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .check-item::before {
+        content: "☑ ";
+        color: #000;
+    }
+
+    .highlight {
+        color: #0056b3;
+        font-weight: 600;
+    }
+
+    .logo {
+        max-width: 180px;
+        height: auto;
+    }
 </style>
 
 
 <div class="position-relative text-center">
-    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+    <img class="w-100" style="background-size:100%; object-fit:cover;" src="~/img/Salary-Surveys.png" alt="Image">
 
     <!-- النص فوق الصورة (أسفل يسار) -->
     <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
-        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Salary Surveys</h1>
+        <h1 class="fw-bold display-4 mb-3" style="color:white">Salary Survey</h1>
     </div>
 </div>
 
-<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
-</div>
 
+
+@* 
 <div class="container my-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
@@ -49,10 +79,46 @@
         </div>
     </div>
 </div>
+ *@
 
 
 
-<div class="text-center" style="margin-top: 200px;">
+
+
+
+
+<div class="container my-5">
+
+    <div class="mb-4">
+        <h5 class="section-title">Are Your Salary Decisions  an Investment or a Gamble?</h5>
+        <p class="check-item"> In a competitive talent market, setting the right compensation is the most critical financial decision you'll make. Relying on guesswork or generic data costs you your best people or drains your budget. We offer you certainty: precise, trusted data from the heart of the Egyptian market, designed to give you a true competitive advantage.</p>
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">Every Day Without Accurate Data, You Risk One of These Hidden Costs</h5>
+       
+    </div>
+
+    <div class="mb-4">
+        <h5 class="section-title">Does any of this sound familiar?</h5>
+        <p class="check-item">These aren't just operational headaches; they are strategic risks <br /> The solution is to replace uncertainty with data.</p>
+
+
+        <ul class="custom-list">
+            <li>Losing Key Talent: Your best performers leave for a competitor who offered just a slightly better package, because you didn't know the true market rate.</li>
+            <li>Overspending on Payroll: You're paying above-market rates for certain positions, eroding your profit margins without seeing a real return in productivity.</li>
+            <li>Internal Inequity: You discover unjustified pay gaps between employees at the same level, damaging morale and creating a toxic work environment.</li>
+            <li>Struggling to Attract Top Candidates: Your job offers consistently fail to attract high-caliber professionals because they don't align with current market expectations.</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+@* <div class="text-center" style="margin-top: 200px;">
     <h1>Every Day Without Accurate Data, You Risk One of These Hidden Costs</h1>
 
 </div>
@@ -82,10 +148,12 @@
 
 
 </div>
-
+ *@
 <hr class="mb-5" />
 
-<div class="container">
+
+
+@* <div class="container">
     <h1 class="text-center mt-5">Why Have Market Leaders Trusted Our Data for 12 Years?</h1>
 
     <div class="row">
@@ -124,6 +192,71 @@
         </div>
     </div>
 </div>
+ *@
+
+
+
+<div class="container py-5">
+
+    <!-- Section Header -->
+    <div class="mb-4">
+        <h5 class="section-title">Why Have Market Leaders Trusted Our Data for 12 Years?</h5>
+        <h6 class="highlight">When it comes to salary data, nothing is more important than trust and relevance. Here’s what makes our surveys the gold standard in Egypt:</h6>
+    </div>
+
+    <!-- TMA Section -->
+    <div class="row align-items-center ">
+        <div class="col-md-4 text-center">
+            <img src="~/img/tma.png" alt="TMA Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">A National Benchmark Built on Trust, Not a Re-purposed Global Report</h6>
+            <p>
+                For 12 years, we have built an impeccable reputation as the most reliable data source
+                in the Egyptian market. We don't just adapt global templates; we collect and analyze
+                data from the leading companies here in Egypt, ensuring every figure reflects the local
+                reality with unparalleled accuracy.
+            </p>
+        </div>
+    </div>
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Unmatched Sector-Specific Depth: Specialists in Your Industry</h6>
+            <p>
+                We understand that the compensation structure in a pharmaceutical company is fundamentally different from a tech firm. That’s why we offer 3 specialized, independent surveys:
+            </p>
+        </div>
+    </div>
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Rigorous Methodology and an Expert Team</h6>
+            <p>
+                Our data is more than just a collection of numbers. Our team of expert analysts validates the data, standardizes job titles, and analyzes trends to deliver a report that gives you not just data, but actionable insights.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
 @* <div class="container mt-5">
@@ -228,30 +361,30 @@
 
 
 
-<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+<section class="py-5 my-5  text-center">
     <div class="container">
         <!-- العنوان -->
-        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
+        <h2 class="fw-bold mb-3">Ready To Build The Future?</h2>
 
         <!-- خط فاصل مع أيقونة -->
         <div class="d-flex align-items-center justify-content-center mb-3">
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
             @* <i class="bi bi-flower1 text-info fs-3"></i> *@
             <img src="~/favicon.png" style="width:30px;" />
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
         </div>
 
         <!-- النص -->
-        <p class="mb-4" style="color:white">
+        <p class="mb-4">
             Contact Us today and let’s make your vision a compliant, sustainable reality.
         </p>
 
         <!-- الأزرار -->
         <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 buttons-container">
-            <a asp-controller="Home" asp-action="Service" class="btn btn-primary text-white responsive-btn  rounded-pill" style="width:300px; font-size:15px;">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-primary  responsive-btn  rounded-pill" style="color:white; width:300px; font-size:15px;">
                 Explore Our Services <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
-            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary  responsive-btn text-white rounded-pill" style="width:300px; font-size:15px;" target="_blank">
+            <a href="https://site.resourcesone.com/home/index" class="btn btn-primary  responsive-btn rounded-pill" style="color:white; width:300px; font-size:15px;" target="_blank">
                 Visit our Candidates' Portal <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
         </div>

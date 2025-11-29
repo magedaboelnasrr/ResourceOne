@@ -38,115 +38,155 @@
     }
 
     }
+
+    .section-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    .check-item::before {
+        content: "☑ ";
+        color: #000;
+    }
+
+    ul.custom-list {
+        list-style-type: disc;
+        margin-left: 1.5rem;
+    }
+
+    .highlight {
+        color: #0056b3;
+        font-weight: 600;
+    }
+
+    .feature {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/B2BTraining-down.png) left center no-repeat;
+        background-size: cover;
+        background-position: left center;
+        min-height: 500px; /* ارتفاع مناسب */
+        display: flex;
+        align-items: center;
+        border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
+    }
+
+    .logo {
+        max-width: 180px;
+        height: auto;
+    }
+
 </style>
 
 
 <div class="position-relative text-center">
-    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+    <img class="w-100" style="object-fit:cover;" src="~/img/B2BTraining.png" alt="Image">
 
     <!-- النص فوق الصورة (أسفل يسار) -->
     <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
-        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">B2BTraining</h1>
+        <h1 class="fw-bold display-4 mb-3" style="color:white">B2BTraining</h1>
     </div>
 </div>
 
-
-
-
-<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
-</div>
 
 
 
 <div class="container my-5">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-md-6">
-            <img src="~/img/competency.jpg" class="w-100" style="height:500px; border-radius:50px;" />
-        </div>
-        <div class="col-md-6 text-center">
-            <h2 class="my-5 custom-heading">Your Team Has Potential <span style="color: #4579bd; font-family:'Calisto MT'; font-style: italic; font-weight: 700; font-size:35px; white-space: nowrap;" class="mobile-break"> We Turn It into Exceptional Performance.</span></h2>
-            <p> In a hyper-competitive market, the smartest investment is in the minds that drive your business. We don't offer conventional training courses; we design customized learning experiences that build skills, foster leadership, and guarantee a tangible return on your human capital investment.</p>
-        </div>
-    </div>
-</div>
 
-
-
-
-
-<div class="text-center" style="margin-top: 200px;">
-    <h1>Are You Facing One of These Challenges in Your Company?</h1>
-
-</div>
-
-<div class="container">
-    <div class="text-center">
-        <h5 style="margin:20px;" class="text-primary">You know your team is the engine of your success, but you might be noticing signs of skill gaps that are hindering growth</h5>
-
+    <div class="mb-4">
+        <h5 class="section-title">Your Team Has Potential  We Turn It into Exceptional Performance.</h5>
+        <p class="check-item">In a hyper-competitive market, the smartest investment is in the minds that drive your business. We don't offer conventional training courses; we design customized learning experiences that build skills, foster leadership, and guarantee a tangible return on your human capital investment.</p>
     </div>
 
-
-    <div class="row mt-5" >
-        <div class="col-md-6">
-            <br />
-
-            <ul>
-                <li><strong>A Leadership Gap:</strong> Are your first-line managers struggling to motivate their teams or manage performance effectively?</li>
-                <li><strong>A Technical Skills Deficit:</strong> Do new technologies or quality standards in your sector (especially Pharma & Food) require specialized technical skills your team lacks?</li>
-                <li><strong>Decreased Productivity:</strong> Do you feel that processes could be more efficient and that your team could achieve more with the same resources?</li>
-                <li><strong>Difficulty Adapting:</strong> Does your team find it hard to adapt to rapid market changes or adopt new ways of working?</li>
-            </ul>
-            <div class="text-center mt-5">
-                <strong class="text-primary">If any of these points sound familiar, you are in the right place.</strong>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <img src="~/img/competency.jpg" class="w-100" style="height:300px; border-radius:50px;" />
-        </div>
+    <div class="mb-4">
+        <h5 class="section-title">Are You Facing One of These Challenges in Your Company?</h5>
        
     </div>
 
+    <div class="mb-4">
+        <h5 class="section-title">You know your team is the engine of your success, but you might be noticing signs of skill gaps that are hindering growth</h5>
 
-</div>
-
-<div class="container" style="margin-top:150px;">
-    <h1 class="text-center mt-5">Why Our Training Makes a Difference: It's Built on Quality and Reality.</h1>
-
-    <div class="row">
-        <div class="text-center my-3">
-            <strong>At Resources One, we believe effective training must be more than just information; it must be a transformational experience. Here’s how we guarantee it:</strong>
-        </div>
-        <div class="col-md-4">
-            <img src="~/img/competency.jpg" class="w-100" />
-            <div class="text-center mt-3">
-                <strong class="text-primary  my-3">National Accreditation That Guarantees Quality: The National Quality Institute (NQI)</strong>
-                <p class="my-3">
-                    We are proud that all our training programs are accredited by the National Quality Institute. This doesn't just mean our content meets the highest national standards; it is your guarantee that your investment is being handled by a certified and trusted partner that delivers uncompromising quality.
-                </p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <img src="~/img/competency.jpg" class="w-100" />
-            <div class="text-center mt-3">
-                <strong class="text-primary  my-3">Deep Sector-Specific Expertise: Specialists in Pharma & Food Industries</strong>
-                <p class="my-3">
-                    We don't offer generic training. We speak your industry's language. Whether it's Good Manufacturing Practices (GMP), the latest Quality Assurance techniques, or specialized sales skills for pharmaceutical companies, our programs are designed to meet the precise challenges and opportunities of your sector.
-                </p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <img src="~/img/competency.jpg" class="w-100" />
-            <div class="text-center mt-3">
-                <strong class="text-primary  my-3">An Integrated Approach: Training as Part of a Success Ecosystem</strong>
-                <p style="margin-top:20px;">
-                    We are not just a training company; we are an integrated HR consultancy. This means we link training directly to the results of competency assessments and help you measure the impact of training on actual performance, ensuring every training hour contributes to your business goals.
-                </p>
-            </div>
-        </div>
+        <ul class="custom-list">
+            <li><strong>A Leadership Gap:</strong> Are your first-line managers struggling to motivate their teams or manage performance effectively?</li>
+            <li><strong>A Technical Skills Deficit:</strong> Do new technologies or quality standards in your sector (especially Pharma & Food) require specialized technical skills your team lacks?</li>
+            <li><strong>Decreased Productivity:</strong> Do you feel that processes could be more efficient and that your team could achieve more with the same resources?</li>
+            <li><strong>Difficulty Adapting:</strong> Does your team find it hard to adapt to rapid market changes or adopt new ways of working?</li>
+        </ul>
     </div>
 </div>
 
 
+
+
+
+
+<hr class="mb-5" />
+
+
+
+
+
+
+<div class="container py-5">
+
+    <!-- Section Header -->
+    <div class="mb-4">
+        <h5 class="section-title"> Why Our Training Makes a Difference: It's Built on Quality and Reality.</h5>
+        <h6 class="highlight">At Resources One, we believe effective training must be more than just information; it must be a transformational experience. Here’s how we guarantee it:</h6>
+       @*  <p>
+            We don't just use any assessment tool; we select the world's best and apply them with our deep expertise in the Egyptian market.
+            Our methodology is based on strict international standards that ensure precision and reliability.
+        </p> *@
+    </div>
+
+    <!-- TMA Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/tma.png" alt="TMA Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">National Accreditation That Guarantees Quality: The National Quality Institute (NQI)</h6>
+            <p>
+                We are proud that all our training programs are accredited by the National Quality Institute. This doesn't just mean our content meets the highest national standards; it is your guarantee that your investment is being handled by a certified and trusted partner that delivers uncompromising quality.
+            </p>
+        </div>
+    </div>
+
+    <!-- Thomas Section -->
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">Deep Sector-Specific Expertise: Specialists in Pharma & Food Industries</h6>
+            <p>
+                We don't offer generic training. We speak your industry's language. Whether it's Good Manufacturing Practices (GMP), the latest Quality Assurance techniques, or specialized sales skills for pharmaceutical companies, our programs are designed to meet the precise challenges and opportunities of your sector.
+            </p>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="~/img/thomas.jpg" alt="Thomas Logo" class="logo img-fluid">
+        </div>
+        <div class="col-md-8">
+            <h6 class="highlight">An Integrated Approach: Training as Part of a Success Ecosystem</h6>
+            <p>
+                We are not just a training company; we are an integrated HR consultancy. This means we link training directly to the results of competency assessments and help you measure the impact of training on actual performance, ensuring every training hour contributes to your business goals.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+@* 
 <div class="container mt-5">
     <div class="row">
         <div class="text-center">
@@ -169,7 +209,7 @@
     </div>
 </div>
 
-
+ *@
 
 
 
@@ -252,26 +292,26 @@
 
 
 
-<section class="py-5 my-5  text-center" style="background: radial-gradient(circle, #f3df29, #000000);">
+<section class="py-5 my-5  text-center">
     <div class="container">
         <!-- العنوان -->
-        <h2 class="fw-bold mb-3" style="color:white">Your Investment in Your Team Today is the Guarantee of Your Success Tomorrow.</h2>
+        <h2 class="fw-bold mb-3" >Your Investment in Your Team Today is the Guarantee of Your Success Tomorrow.</h2>
 
         <!-- خط فاصل مع أيقونة -->
         <div class="d-flex align-items-center justify-content-center mb-3">
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
             @* <i class="bi bi-flower1 text-info fs-3"></i> *@
             <img src="~/favicon.png" style="width:30px;" />
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
+            <hr class="mx-2 " style="border-top: 5px solid; opacity: 0.5; width: 200px;">
         </div>
 
         <!-- النص -->
-        <p class="mb-4" style="color:white">
+        <p class="mb-4" >
             Are you ready to transform your team's potential into a driving force for your company's growth? <br /> Contact us today for a free analysis of your training needs.
         </p>
 
         <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3">
-            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary text-white responsive-btn  rounded-pill" style="width:500px; padding:15px; font-size:15px;">
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary  responsive-btn  rounded-pill" style="color:white; width:500px; padding:15px; font-size:15px;">
                 Request Your Free Training Needs Analysis <i class="bi bi-box-arrow-up-right ms-2"></i>
             </a>
 

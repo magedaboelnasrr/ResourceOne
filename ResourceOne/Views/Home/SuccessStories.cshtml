@@ -261,7 +261,7 @@
     }
 
     .feature {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/CompetencyInside.jpg) left center no-repeat;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 50%), url(../img/question.png) left center no-repeat;
         background-size: cover;
         background-position: left center;
         min-height: 500px; /* ارتفاع مناسب */
@@ -269,6 +269,18 @@
         align-items: center;
         border-radius: 10px; /* لو حابب تضيف حواف ناعمة */
     }
+
+    .logos {
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .slider {
+        display: flex;
+        width: max-content;
+        animation: slidein 30s linear infinite;
+    }
+
 </style>
 
 
@@ -276,15 +288,15 @@
 <!-- About Start -->
 
 <div class="position-relative text-center">
-    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/CompetencyInside.jpg" alt="Image">
+    <img class="w-100"
+         style="height:600px; object-fit:cover;"
+         src="~/img/Success-Stories.png"
+         alt="Image">
 
     <!-- النص فوق الصورة (أسفل يسار) -->
     <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
-        <h1 class="fw-bold display-4 mb-3" style="color:#fff;">Success Stories</h1>
+        <h1 class="fw-bold display-4 mb-3" style="color:white">Success Stories</h1>
     </div>
-</div>
-
-<div style="background: linear-gradient(to bottom, #000000 0%, #000000 40%, #f3df29 70%, #ffffff 100%); padding-top:70px; padding-bottom:70px;">
 </div>
 
 
@@ -303,7 +315,7 @@
 
 
 <!-- Features Start -->
-<div class="container-fluid  pb-6 pt-3" style="background: linear-gradient(to right, #4579bd 0%, #f3df29 50%, #4579bd 100%);">
+<div class="container-fluid  pb-6 pt-3" >
     <!-- العنوان -->
     <div class="partners-title border border-5 border-yellow p-4 text-center mt-4">
         <h4 class="lh-base text-uppercase mb-0">Partners & Accreditations</h4>
@@ -323,8 +335,8 @@
 
             <div class="col-md-6 col-lg-4">
                 <div class="feature-item border  d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
-                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
-                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    <div class="feature-icon btn-xxl-square mb-3">
+                        <img src="~/favicon.png" style="width:50px;" />
                     </div>
                     <h5 class="text-uppercase text-white mb-4">Tma</h5>
                     <p class="flex-grow-1" style="color:white">
@@ -336,8 +348,8 @@
 
             <div class="col-md-6 col-lg-4">
                 <div class="feature-item border  d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
-                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
-                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    <div class="feature-icon btn-xxl-square mb-3">
+                        <img src="~/favicon.png" style="width:50px;" />
                     </div>
                     <h5 class="text-uppercase text-white mb-4">GXPZONE Pharma Solutions Pvt.Ltd</h5>
                     <p class=" flex-grow-1" style="color:white">
@@ -348,8 +360,8 @@
 
             <div class="col-md-6 col-lg-4">
                 <div class="feature-item border  d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
-                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
-                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    <div class="feature-icon btn-xxl-square mb-3">
+                        <img src="~/favicon.png" style="width:50px;" />
                     </div>
                     <h5 class="text-uppercase text-white mb-4">gradar - the job evaluation engine</h5>
                     <p class=" flex-grow-1" style="color:white">
@@ -361,8 +373,8 @@
             <!-- الصف الثاني - الكارت الأول -->
             <div class="col-md-6 col-lg-4 offset-lg-2">
                 <div class="feature-item border d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
-                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
-                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    <div class="feature-icon btn-xxl-square  mb-3">
+                        <img src="~/favicon.png" style="width:50px;" />
                     </div>
                     <h5 class="text-uppercase text-white mb-4">
                         Al-Mayadin (Institute for Training ®)
@@ -376,8 +388,8 @@
             <!-- الصف الثاني - الكارت الثاني -->
             <div class="col-md-6 col-lg-4">
                 <div class="feature-item border  d-flex flex-column p-4 h-100" style="border-radius:50px; background-color:dimgray">
-                    <div class="feature-icon btn-xxl-square bg-primary mb-3">
-                        <i class="fa fa-dollar-sign fa-2x text-white"></i>
+                    <div class="feature-icon btn-xxl-square  mb-3">
+                        <img src="~/favicon.png" style="width:50px;" />
                     </div>
                     <h5 class="text-uppercase text-white mb-4">elite house (Dar El-Nokhba)</h5>
                     <p class=" flex-grow-1" style="color:white">
@@ -399,25 +411,25 @@
     <h1 class="text-dark">Committed to the Highest Standards of Quality</h1>
 </div>
 
-<div class=" text-center p-5" style="background: radial-gradient(circle, #f3df29, #000000);">
+<div class=" text-center p-5">
     <div class="d-flex justify-content-around align-items-center flex-wrap">
         <!-- العمود الأول -->
         <div class="text-center me-4">
             <img src="~/img/certificate_page-0001.jpg" style="width:500px;" />
-            <p class="p-3 " style="color:white;">
+            <p class="p-3">
                 Our commitment to excellence is not just a promise; it's certified. <br />
                 These accreditations guarantee that our processes and services <br />
                 meet the highest national and international quality standards.
             </p>
         </div>
 
-        <!-- Divider عمودي -->
-        <div style="width:10px; height:500px; background-color:white;"></div>
+        @* <!-- Divider عمودي -->
+        <div style="width:10px; height:500px; background-color:deepskyblue;"></div> *@
 
         <!-- العمود الثاني -->
         <div class="text-center ms-4">
             <img src="~/img/certificate_page-0002.jpg" style="width:500px;" />
-            <p class="p-3" style="color:white;">
+            <p class="p-3">
                 Our training programs are fully accredited by the NQI,<br />
                 ensuring that your team receives the highest quality,<br />
                 most impactful development available in the market.
@@ -429,44 +441,72 @@
 
 
 
-
 @* logos Start *@
 
 
-<div class=" h-100 my-5">
+<div class=" h-100" style="margin-top:100px; margin-bottom:200px;">
     <div class="row align-items-center h-100">
-        <div class="container rounded">
-            <h1 class="text-center text-dark" style="margin-top:50px;margin-bottom:100px;">Trusted by Industry Leaders</h1>
+        <div class="containerrr rounded">
+            <h1 class="text-center text-uppercase" style="margin-bottom:50px; margin-top:50px;">Our Clients</h1>
             <div class="slider">
+                <div class="logos" style="margin-top:50px;">
+                    <img src="~/Logos/C LOGO-01.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-02.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-03.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-04.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-05.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-06.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-07.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-08.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-09.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-11.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-12.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-13.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-14.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-15.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-16.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-17.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-18.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-19.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-21.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-22.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-23.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-24.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-25.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-26.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-27.png" width="200" class="mx-2" />
+                </div>
 
+                <!-- نسخة ثانية مكررة -->
                 <div class="logos">
-                    <img src="~/Logos/C LOGO-01.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-02.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-03.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-04.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-05.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-06.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-07.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-08.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-09.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-11.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-12.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-13.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-14.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-15.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-16.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-17.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-18.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-19.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-21.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-22.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-23.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-24.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-25.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-26.png" width="200" class="mx-1" />
-                    <img src="~/Logos/C LOGO-27.png" width="200" class="mx-1" />
+                    <img src="~/Logos/C LOGO-01.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-02.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-03.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-04.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-05.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-06.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-07.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-08.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-09.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-11.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-12.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-13.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-14.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-15.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-16.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-17.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-18.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-19.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-21.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-22.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-23.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-24.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-25.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-26.png" width="200" class="mx-2" />
+                    <img src="~/Logos/C LOGO-27.png" width="200" class="mx-2" />
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -474,36 +514,6 @@
 
 @* logos End *@
 
-
-<section class="pt-6 pb-6  text-center" style="background: radial-gradient(circle, #f3df29, #000000); margin-top:100px; margin-bottom:50px;">
-    <div class="container">
-        <!-- العنوان -->
-        <h2 class="fw-bold mb-3" style="color:white">Ready To Build The Future?</h2>
-
-        <!-- خط فاصل مع أيقونة -->
-        <div class="d-flex align-items-center justify-content-center mb-3">
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
-            @* <i class="bi bi-flower1 text-info fs-3"></i> *@
-            <img src="~/favicon.png" style="width:30px;" />
-            <hr class="mx-2 " style="border-top: 5px solid #fff; opacity: 0.5; width: 200px;">
-        </div>
-
-        <!-- النص -->
-        <p class="mb-4" style="color:white">
-            Contact Us today and let’s make your vision a compliant, sustainable reality.
-        </p>
-
-        <!-- الأزرار -->
-        <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3">
-            <a asp-controller="Home" asp-action="Service" class="btn btn-info text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
-                Explore Our Solutions  <i class="bi bi-box-arrow-up-right ms-2"></i>
-            </a>
-            <a asp-controller="Home" asp-action="Contact" class="btn btn-info  text-white responsive-btn rounded-pill" style="width:300px; font-size:15px;">
-                Contact Us to Be Partner  <i class="bi bi-box-arrow-up-right ms-2"></i>
-            </a>
-        </div>
-    </div>
-</section>
 
 <div class="text-center mb-5">
     <h1>Your Questions, Answered</h1>
@@ -611,6 +621,38 @@
     </div>
 </div>
 
+
+
+
+<section class="pt-6 pb-6  text-center" style=" margin-top:100px; margin-bottom:50px;">
+    <div class="container">
+        <!-- العنوان -->
+        <h2 class="fw-bold mb-3">Ready To Build The Future?</h2>
+
+        <!-- خط فاصل مع أيقونة -->
+        <div class="d-flex align-items-center justify-content-center mb-3">
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
+            @* <i class="bi bi-flower1 text-info fs-3"></i> *@
+            <img src="~/favicon.png" style="width:30px;" />
+            <hr class="mx-2 " style="border-top: 5px solid ; opacity: 0.5; width: 200px;">
+        </div>
+
+        <!-- النص -->
+        <p class="mb-4">
+            Contact Us today and let’s make your vision a compliant, sustainable reality.
+        </p>
+
+        <!-- الأزرار -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center buttons-container gap-3">
+            <a asp-controller="Home" asp-action="Service" class="btn btn-primary  responsive-btn rounded-pill" style="width:300px; color:white; font-size:15px;">
+                Explore Our Solutions  <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary  responsive-btn rounded-pill" style="width:300px; color:white; font-size:15px;">
+                Contact Us to Be Partner  <i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
 
 
