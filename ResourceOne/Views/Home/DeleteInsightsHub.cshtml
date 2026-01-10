@@ -1,0 +1,37 @@
+﻿@model BlogViewModel
+@{
+    ViewData["Title"] = "DeleteInsightsHub";
+}
+
+<div class="text-center">
+    <h1>Delete Blog</h1>
+</div>
+
+<div class="container">
+    <form asp-controller="Home" asp-action="DeleteInsightsHub" method="post" enctype="multipart/form-data">
+
+        <label>Title</label>
+        <input type="text" class="form-control" asp-for="Title" readonly />
+        <br />
+        <label>Paragraph</label>
+        <textarea type="text" class="form-control" asp-for="Body" readonly  rows="10"> </textarea> 
+        <br />
+        <label>Created Date</label>
+        <input type="date" class="form-control" asp-for="CreatedDate" readonly/>
+        <br />
+        <label>Publisher</label>
+        <input type="text" class="form-control" asp-for="Publisher" readonly />
+        <br />
+        <label>Category</label>
+        <select class="form-control" asp-for="Category">
+            <option value="">-- Select Category --</option>
+            <option value="News">News</option>
+            <option value="blogs">Blogs</option>
+        </select>
+        <br />
+        <label>Upload Image</label>
+        <input type="file" class="form-control" asp-for="Image" readonly />
+        <br />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+</div>

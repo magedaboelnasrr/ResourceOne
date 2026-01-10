@@ -1,0 +1,89 @@
+﻿@model RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
+}
+
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center text-primary">Create Account</h4>
+            <form asp-controller="Account" asp-action="Register" method="post">
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input type="text" asp-for="FullName" class="form-control" placeholder="Full name" />
+                    <span asp-validation-for="FullName" class="text-danger"></span>
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input type="email" asp-for="Email" class="form-control" placeholder="Email address">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input type="password" asp-for="Password" class="form-control" placeholder="Create password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Repeat password">
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div> <!-- form-group// -->
+                <div>
+                    <button type="submit" class="btn btn-primary mt-2"> Create Account  </button>
+                </div> <!-- form-group// -->
+                <p class="text-center">Have an account? <a asp-controller="Account" asp-action="Login" class="text-primary">Log In</a> </p>
+            </form>
+        </article>
+    </div> <!-- card.// -->
+
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+
+@section Scripts {
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage) {
+                toastr.options = {
+                    "closeButton": true,           // زرار X
+                    "progressBar": true,           // شريط تقدم
+                    "positionClass": "toast-bottom-right", // تحت يمين
+                    "timeOut": "5000"              // 5 ثواني
+                };
+                toastr.success(successMessage);
+            }
+        });
+    </script>
+}
