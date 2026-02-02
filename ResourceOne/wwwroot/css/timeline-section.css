@@ -1,0 +1,269 @@
+/* ===================================
+   Timeline Section Styles
+   Exact replica of Alrowad Pico design
+   =================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    
+    
+    overflow-x: hidden;
+}
+
+/* Timeline Section */
+.timeline-section {
+    background-color: #0a2e50;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Timeline Container */
+.timeline-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Navigation Buttons */
+.timeline-nav {
+    width: 50px;
+    height: 50px;
+    background: rgba(18, 28, 39, 0.9);
+    border: 1px solid #333c45;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.timeline-nav:hover {
+    background: rgba(200, 154, 62, 0.2);
+    border-color: #c89a3e;
+}
+
+.timeline-nav:active {
+    transform: scale(0.95);
+}
+
+.timeline-nav svg {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    transition: color 0.3s ease;
+}
+
+.timeline-nav:hover svg {
+    color: #c89a3e;
+}
+
+.timeline-nav:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.timeline-nav:disabled:hover {
+    background: rgba(18, 28, 39, 0.9);
+    border-color: #333c45;
+}
+
+.timeline-nav:disabled svg {
+    color: #fff;
+}
+
+/* Timeline Wrapper */
+.timeline-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    margin: 0 30px;
+}
+
+/* Timeline Track */
+.timeline-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Timeline Item */
+.timeline-item {
+    flex: 0 0 calc(25% - 30px);
+    min-width: 300px;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Timeline Period (Year) */
+.timeline-period {
+    font-size: 15px;
+    font-weight: 500;
+    color: #cecdcd;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+/* Timeline Title */
+.timeline-title {
+    font-size: 23px;
+    font-weight: 500;
+    color: #f3df29 !important;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Timeline Dot & Line Container */
+.timeline-dot-container {
+    position: relative;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+/* Timeline Connecting Line */
+.timeline-dot-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #353e47;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Outer Circle (Dark background behind dot) */
+.timeline-dot-outer {
+    width: 35px;
+    height: 35px;
+    background-color: #121c27;
+    border: 1px solid #333c45;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Inner Dot (White) */
+.timeline-dot {
+    width: 11px;
+    height: 11px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+/* Timeline Description */
+.timeline-description {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #c4c4c4;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .timeline-item {
+        flex: 0 0 calc(33.33% - 20px);
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 992px) {
+    .timeline-item {
+        flex: 0 0 calc(50% - 15px);
+        min-width: 240px;
+    }
+    
+    .timeline-wrapper {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-section {
+        padding: 60px 0;
+    }
+    
+    .timeline-nav {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .timeline-nav svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .timeline-item {
+        flex: 0 0 calc(100% - 20px);
+        min-width: 220px;
+        max-width: 280px;
+    }
+    
+    .timeline-title {
+        font-size: 20px;
+        min-height: 50px;
+    }
+    
+    .timeline-description {
+        font-size: 14px;
+    }
+    
+    .timeline-wrapper {
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-container {
+        padding: 0 10px;
+    }
+    
+    .timeline-nav {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .timeline-wrapper {
+        margin: 0 10px;
+    }
+    
+    .timeline-item {
+        padding: 0 10px;
+    }
+    
+    .timeline-title {
+        font-size: 18px;
+    }
+    
+    .timeline-description {
+        font-size: 13px;
+    }
+}

@@ -2,6 +2,9 @@
     ViewData["Title"] = "About";
 }
 
+
+
+<link rel="stylesheet" href="~/css/timeline-section.css">
 <style>
     @@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
@@ -353,35 +356,7 @@
             font-size: 1.2rem;
         }
 
-    .t0 {
-        background: radial-gradient(circle, #7ec8ff, #000000);
-        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/1987.png"); */
-        z-index: 9;
-    }
-
-    .t1 {
-        background: radial-gradient(circle, #7ec8ff, #000000);
-        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/1993.png"); */
-        z-index: 7;
-    }
-
-    .t2 {
-        background: radial-gradient(circle, #7ec8ff, #000000);
-        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/2000.png"); */
-        z-index: 5;
-    }
-
-    .t3 {
-        background: radial-gradient(circle, #7ec8ff, #000000);
-        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/2001.png"); */
-        z-index: 3;
-    }
-
-    .t4 {
-        background: radial-gradient(circle, #7ec8ff, #000000);
-        /* background-image: url("https://test.akararesources.com/wp-content/uploads/2024/05/2003.png"); */
-        z-index: 1;
-    }
+   
     /* Animation defaults */
     .animate {
         transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
@@ -642,7 +617,7 @@
 
 
 <div class="position-relative text-center">
-    <img class="w-100" style="height:600px; object-fit:cover;" src="~/img/about-us.png" alt="Image">
+    <img class="w-100" style=" object-fit:cover;" src="~/img/about-us.png" alt="Image">
 
     <!-- النص فوق الصورة (أسفل يسار) -->
     <div class="position-absolute bottom-0 start-0 w-100 text-start p-4">
@@ -677,8 +652,8 @@
             <div class="col-md-6">
                 <h2 class="fw-bold mt-2">WHO WE ARE</h2>
                 <p>
-                    Resources-One is one of the Leading <br /> consultancy firms in HR Industry in Egypt.
-                    As Human Resources have a strategic role within any organization, Resources One Offers an integrated HR Governance services such as
+                    Resources-One is one of the Leading consultancy firms in HR Industry in Egypt.
+                    As Human Resources have a strategic role within any organization, Resources-One Offers an integrated HR Governance services such as
                 </p>
 
                 <ul class="list-unstyled">
@@ -699,7 +674,11 @@
                         Online Salary Survey, and Recruitment both locally and internationally
                     </li>
                 </ul>
+                <p>
+                    Resources Recruitment is a sister company specialize in offering services of recruitment and payroll outsourcing in Egypt and the gulf
+                </p>
                 <hr />
+
                 <p>
                     Resources-One was established in 2007 for one aim, which is developing the Egyptian Industry through developing its individuals in the HRM area.
                     Resources-One Team believes the Human capital in Egypt has to be equipped as well as skilled with all the elements ensuring its competitive advantage to fit and compete within the globalization situation.
@@ -714,7 +693,8 @@
 
             <!-- العمود الثاني -->
             <div class="col-md-6">
-                <iframe width="800" height="540" src="https://www.youtube.com/embed/X3cdhDbWez0?si=lN9Nc2b_MSnM0aWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               
+                <iframe width="800" height="540" src="https://www.youtube.com/embed/pmFu76m5cYw?si=jcgpI-nE6dyqkOYT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -727,70 +707,114 @@
 </div>
 
 
-<header>
-    <navv>
-        <div class="nav-arrows">
-            <span id="prevArrow" onclick="prevTime()">
-                <i class="fas fa-arrow-left"></i>
-            </span>
+<section class="timeline-section">
+    <div class="timeline-container">
+        <!-- Navigation Arrow Prev -->
+        <button class="timeline-nav timeline-nav-prev" aria-label="Previous">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Timeline Wrapper -->
+        <div class="timeline-wrapper">
+            <div class="timeline-track">
+                <!-- Timeline Item 1: Company Foundation (2004) -->
+                <div class="timeline-item">
+                    <div class="timeline-period">Since 2007</div>
+                    <div class="timeline-title">Company Foundation</div>
+                    <div class="timeline-dot-container">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">
+                        2007: The Foundation Resources-One was established with a clear and ambitious mission: to elevate the Egyptian corporate landscape by empowering its most valuable asset—its people.
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2: Building Trust (2005-2008) -->
+                <div class="timeline-item">
+                    <div class="timeline-period">2013</div>
+                    <div class="timeline-title">Building Trust</div>
+                    <div class="timeline-dot-container">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">
+                        A Landmark Year We launched our first annual Salary Survey, quickly establishing it as the most reliable and sought-after benchmark for compensation data in the Egyptian market.
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: Expanding Solutions (2009-2012) -->
+                <div class="timeline-item">
+                    <div class="timeline-period">2018</div>
+                    <div class="timeline-title">Expanding Solutions</div>
+                    <div class="timeline-dot-container">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">
+                        Global Partnerships Became the sole agent for TMA (Holland) in Egypt, bringing world-class competency assessment tools to our clients and reinforcing our commitment to international standards of excellence.
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4: Pioneering Projects (2013-2016) -->
+                <div class="timeline-item">
+                    <div class="timeline-period">2023</div>
+                    <div class="timeline-title">Pioneering Projects</div>
+                    <div class="timeline-dot-container">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">
+                        National Impact In partnership with the Ministry of Education, we launched our groundbreaking Technical Education Initiative to bridge the gap between industry needs and  education outputs.
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5: Global Standards (2017-2020) -->
+                <div class="timeline-item">
+                    <div class="timeline-period">Today</div>
+                    <div class="timeline-title">Strategic Partner</div>
+                    <div class="timeline-dot-container">
+                        <div class="timeline-dot-outer">
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-description">
+                        Your Trusted Partner With over 20 years of experience, a portfolio of Egypt's leading companies, and a flawless compliance record, we continue to be the strategic partner for organizations.
+                    </div>
+                </div>               
+            </div>
         </div>
 
-        <div class="nav-times">
-            <button class="active" data-destination="0" onclick="setPositionByIndex(0)">
-                <span class="text">2007</span>
-                <span class="horLine"></span>
-
-            </button>
-
-            <div class="time-divider"></div>
-
-            <button data-destination="1" onclick="setPositionByIndex(1)">
-                <span class="text">2013</span>
-                <span class="horLine"></span>
-
-            </button>
-
-            <button data-destination="2" onclick="setPositionByIndex(2)">
-                <span class="text">2018</span>
-                <span class="horLine"></span>
-
-            </button>
-
-            <button data-destination="3" onclick="setPositionByIndex(3)">
-                <span class="text">2023</span>
-                <span class="horLine"></span>
-
-            </button>
-            <button data-destination="4" onclick="setPositionByIndex(4)">
-                <span class="text">Today</span>
-                <span class="horLine"></span>
-
-            </button>
+        <!-- Navigation Arrow Next -->
+        <button class="timeline-nav timeline-nav-next" aria-label="Next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</section>
 
 
 
-        </div>
-        <div class="nav-arrows">
-            <span id="nextArrow" onclick="nextTime()">
-                <i class="fas fa-arrow-right"></i>
-            </span>
-        </div>
-    </navv>
-</header>
-
-<main>
+@* <main>
     <div class="slider-container">
         <div id="t0" data-order="0" class="time t0">
             <div class="content">
                 <h2>2007</h2>
-                <p>2007: The Foundation Resources One was established with a clear and ambitious mission: to elevate the Egyptian corporate landscape by empowering its most valuable asset—its people. We started with the belief that strategic HR is the cornerstone of sustainable business success.</p>
+                <p style="font-size:25px;">2007: The Foundation Resources One was established with a clear and ambitious mission: to elevate the Egyptian corporate landscape by empowering its most valuable asset—its people. We started with the belief that strategic HR is the cornerstone of sustainable business success.</p>
             </div>
         </div>
 
         <div id="t1" data-order="1" class="time t1">
             <div class="content">
                 <h2 class="animate slide-left">2013</h2>
-                <p class="animate slide-up fade">
+                <p style="font-size:25px;" class="animate slide-up fade">
                     A Landmark Year We launched our first annual Salary Survey, quickly establishing it as the most reliable and sought-after benchmark for compensation data in the Egyptian market. This marked our transition into a data-driven consultancy.
                 </p>
             </div>
@@ -799,14 +823,14 @@
         <div id="t2" data-order="2" class="time t2">
             <div class="content">
                 <h2 class="animate slide-right">2018</h2>
-                <p class="animate slide-down">Global Partnerships Became the sole agent for TMA (Holland) in Egypt, bringing world-class competency assessment tools to our clients and reinforcing our commitment to international standards of excellence.</p>
+                <p style="font-size:25px;" class="animate slide-down">Global Partnerships Became the sole agent for TMA (Holland) in Egypt, bringing world-class competency assessment tools to our clients and reinforcing our commitment to international standards of excellence.</p>
             </div>
         </div>
 
         <div id="t3" data-order="3" class="time t3">
             <div class="content">
                 <h2 class="animate slide-down">2023</h2>
-                <p class="animate slide-right">
+                <p style="font-size:25px;" class="animate slide-right">
                     National Impact In partnership with the Ministry of Education, we launched our groundbreaking Technical Education Initiative, a project designed to bridge the gap between industry needs and technical education outputs, shaping the future of Egypt's skilled workforce.
                 </p>
             </div>
@@ -815,14 +839,14 @@
         <div id="t4" data-order="4" class="time t4">
             <div class="content">
                 <h2 class="animate slide-up">Today</h2>
-                <p class="animate slide-left">Your Trusted Partner With over 18 years of experience, a portfolio of Egypt's leading companies, and a flawless compliance record, we continue to be the strategic partner of choice for organizations aiming for growth, efficiency, and a thriving workplace culture.</p>
+                <p style="font-size:25px;" class="animate slide-left">Your Trusted Partner With over 18 years of experience, a portfolio of Egypt's leading companies, and a flawless compliance record, we continue to be the strategic partner of choice for organizations aiming for growth, efficiency, and a thriving workplace culture.</p>
             </div>
         </div>
 
     </div>
 
 </main>
-
+ *@
 
 
 <div class="d-flex">
@@ -890,7 +914,7 @@
 
                     <!-- الصورة -->
                     <img class="img-fluid w-75"
-                         style="height:400px; object-fit:cover; border-radius:50px;"
+                         style="height:400px; filter: brightness(0.3); object-fit:cover; border-radius:50px;"
                          src="~/img/valuesUpdate.jpeg" />
 
                     <!-- النصوص فوق الصورة -->
@@ -934,8 +958,8 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="about-imgg">
-                    <img class="img-fluid w-100" style="border-radius:50px;" src="~/img/drnariman.jpeg">
+                <div class="about-imgggg">
+                    <img class="img-fluid w-100" style="border-radius:50px;" src="~/img/nariman.jfif">
                     <div class="border border-5 border-yellow p-4 text-center mt-4" style="border-radius:50px;">
                         <h4 class="lh-base text-uppercase mb-0">
                             We build the future of business by empowering your HR Governance
@@ -947,9 +971,9 @@
                 <h1 class="display-6 text-uppercase mb-4">The Driving Force Behind Our Success</h1>
                 <p class="mb-4">
                     <i class="fa fa-check-square text-primary me-3"></i>Name: Dr. Nareman Khattab <br />
-                    <i class="fa fa-check-square text-primary me-3"></i>Title: CEO and Projects Director <br />
-                    <i class="fa fa-check-square text-primary me-3"></i>Bio: With over two decades of experience in human resources management and organizational development,<br /> <br /> Dr. Nareman Khattab is the visionary leader behind Resources One. Her profound expertise and unwavering commitment to excellence have been instrumental in shaping the company into a market leader. <br /> <br />
-                    Dr. Khattab is a firm believer that an organization's success is a direct reflection of its people's potential. <br /> <br /> This philosophy is embedded in every service and solution Resources One offers.<br /> <br /> Her strategic direction has led to the successful implementation of large-scale national projects and the establishment of exclusive partnerships with global entities like the European Bank for Reconstruction and Development (EBRD) and TMA.<br /> <br />
+                    <i class="fa fa-check-square text-primary me-3"></i>Title: Founder & CEO <br />
+                    <i class="fa fa-check-square text-primary me-3"></i>Bio: With over two decades of experience in human resources management and organizational development,<br /> <br /> Dr. Nareman Khattab is the visionary leader behind Resources-One. Her profound expertise and unwavering commitment to excellence have been instrumental in shaping the company into a market leader. <br /> <br />
+                    Dr. Khattab is a firm believer that an organization's success is a direct reflection of its people's potential. <br /> <br /> This philosophy is embedded in every service and solution Resources-One offers.<br /> <br /> Her strategic direction has led to the successful implementation of large-scale national projects and the establishment of exclusive partnerships with global entities like the European Bank for Reconstruction and Development (EBRD) and TMA.<br /> <br />
                     As a thought leader in the HR community, Dr. Khattab is dedicated to elevating industry standards and preparing Egyptian companies for the future of work. <br /> <br /> Her leadership is not just about managing a company; it's about building a legacy of excellence. Ready to leverage this expertise for your business?
 
 
@@ -1022,6 +1046,8 @@
 
 @section Scripts {
 
+
+    <script src="~/js/timeline-section.js"></script>
     <script src="https://kit.fontawesome.com/14554c09c9.js" crossorigin="anonymous"></script>
 
     <script>

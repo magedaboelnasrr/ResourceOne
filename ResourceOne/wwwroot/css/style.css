@@ -256,9 +256,10 @@ a:hover {
     background-size: cover;
 }
 
-.about-img {
+.about-img img {
     position: relative;
     padding-right: 45px;
+    filter: brightness(0.3);
 }
 
     .about-img::before {
@@ -291,11 +292,54 @@ a:hover {
 
 
 /*about image*/
-/*** About ***/ .about-imgg {
+/*** About ***/
+.about-imgg {
+    position: relative;
+    padding-left: 45px;
+    
+}
+.about-imgggg {
     position: relative;
     padding-left: 45px;
 }
 
+
+    .about-imgggg::before {
+        position: absolute;
+        content: "";
+        width: 200px;
+        height: 300px;
+        top: 0;
+        left: 0;
+        border: 5px solid #f3df29 !important;
+        animation: animateUpDownn 3s ease-in-out infinite;
+        border-radius: 50px;
+        z-index: -1;
+    }
+
+@keyframes animateUpDownn {
+    0% {
+        top: -25px;
+    }
+
+    50% {
+        top: -45px;
+    }
+
+    100% {
+        top: -25px;
+    }
+}
+
+
+
+
+
+
+
+.about-imgg img {
+    filter: brightness(0.3);
+}
     .about-imgg::before {
         position: absolute;
         content: "";
