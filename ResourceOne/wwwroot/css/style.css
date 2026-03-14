@@ -256,9 +256,14 @@ a:hover {
     background-size: cover;
 }
 
-.about-img img {
+.about-img {
     position: relative;
     padding-right: 45px;
+}
+
+.about-img img {
+    position: relative;
+    /*padding-right: 45px;*/
     filter: brightness(0.3);
 }
 

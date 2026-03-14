@@ -149,7 +149,7 @@
 
     <h2 class="mb-4 text-center"> Latest Articles</h2>
     <div class="row g-4">
-        @foreach (var item in Model.Blogs)
+      @*   @foreach (var item in Model.Blogs)
         {
             <!-- الكارد الأول -->
             <div class="col-md-3 col-sm-6">
@@ -196,7 +196,74 @@
             </div>
 
         }
-    </div>
+    </div> *@
+
+
+
+        <div class="row g-4">
+            @foreach (var item in Model.Blogs)
+            {
+                <!-- الكارد الأول -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100">
+                        <!-- الصورة -->
+                        <img src="~/Images/@item.ImageName" class="card-img-top" alt="SEO">
+
+                        <div class="card-body">
+                            <!-- العنوان -->
+                            <h5 class="card-title fw-bold mb-3">
+                                @item.Title
+                            </h5>
+
+                            <!-- النص -->
+                            @*   <p class="card-text text-muted">
+                            @(item.Body.Length > 100 ? item.Body.Substring(0, 100) + " ..." : item.Body)
+                        </p>
+ *@                     
+
+                             <p class="card-text text-muted">
+                                @{
+                                    // إزالة الوسوم HTML من النص
+                                    var plainText = Regex.Replace(item.Body, "<.*?>", string.Empty);
+
+                                    // عمل ملخص من 100 حرف فقط
+                                    var summary = plainText.Length > 100
+                                    ? plainText.Substring(0, 100) + " ..."
+                                    : plainText;
+                                }
+                                @summary
+                            </p>
+                            <!-- زر -->
+                            <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Read More</a>
+                        </div>
+
+                        <!-- الفوتر -->
+                        <div class="card-footer bg-white d-flex justify-content-between align-items-center small text-muted">
+                            <div>
+                                <i class="bi bi-calendar-event"></i> @item.CreatedDate.ToString("dd MMM yyyy")
+                            </div>
+                            <div>
+                                @item.Category
+                                <i class="bi bi-person"></i> <small class="fw-bold">@item.Publisher</small>
+                            </div>
+
+                        </div>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <div class="card-footer bg-white border-0">
+                                <a class="btn btn-warning btn-sm"
+                                   asp-controller="Home" asp-action="UpdateInsightsHub" asp-route-id="@item.Id">Update</a>
+                                <a class="btn btn-danger btn-sm"
+                                   asp-controller="Home" asp-action="DeleteInsightsHub" asp-route-id="@item.Id">Delete</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            }
+        </div>
+
+
     <!-- Pagination for Blogs -->
     <div class="d-flex justify-content-center mt-4">
         <nav aria-label="Blogs pagination">
