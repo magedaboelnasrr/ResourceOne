@@ -30,7 +30,7 @@
 
 
 
-<div class="container my-5">
+<div class="container my-5" dir="auto">
     <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
         <!-- الصورة الرئيسية -->
         <img src="~/Images/@Model.ImageName" class="w-100" style="max-height:500px; object-fit:cover;" alt="@Model.Title">
@@ -49,7 +49,7 @@
             </p>
 
             <!-- المحتوى -->
-            <div class="blog-content">
+            <div class="blog-content" dir="auto">
                 @Html.Raw(Model.Body)
             </div>
         </div>

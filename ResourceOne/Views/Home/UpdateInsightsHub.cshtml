@@ -44,7 +44,7 @@
         ClassicEditor
             .create(document.querySelector('#Body'), {
                 ckfinder: {
-                    uploadUrl: '/Home/UploadImage' // API في السيرفر لرفع الصور
+                    uploadUrl: '/Home/UploadImage'
                 },
                 toolbar: [
                     'heading', '|',
@@ -53,9 +53,17 @@
                     'undo', 'redo'
                 ]
             })
+            .then(editor => {
+                const editableElement = editor.ui.view.editable.element;
+
+                // اتجاه تلقائي حسب أول حرف يكتبه المستخدم
+                editableElement.setAttribute('dir', 'auto');
+                editableElement.style.unicodeBidi = 'plaintext';
+            })
             .catch(error => {
                 console.error(error);
             });
     </script>
+}
 
 }
