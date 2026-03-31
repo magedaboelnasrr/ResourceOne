@@ -34,7 +34,7 @@
 
 
 
-<div class="container my-5">
+<div class="container my-5" >
     <h2 class="mb-4 text-center">Latest News</h2>
     <div class="row g-4">
         @foreach (var item in Model.News)
@@ -57,12 +57,18 @@
                         </p>
  *@                     
 
-                         <p class="card-text text-muted">
+                            <p class="card-text text-muted">
                             @{
-                                // إزالة الوسوم HTML من النص
-                                var plainText = Regex.Replace(item.Body, "<.*?>", string.Empty);
+                                // إزالة الوسوم HTML
+                                var plainText = Regex.Replace(item.Body ?? "", "<.*?>", string.Empty);
 
-                                // عمل ملخص من 100 حرف فقط
+                                // تحويل &nbsp; و &amp; وغيرها لنص عادي
+                                plainText = System.Net.WebUtility.HtmlDecode(plainText);
+
+                                // استبدال المسافات غير القابلة للكسر بمسافة عادية
+                                plainText = plainText.Replace('\u00A0', ' ');
+
+                                // عمل ملخص
                                 var summary = plainText.Length > 100
                                 ? plainText.Substring(0, 100) + " ..."
                                 : plainText;
@@ -221,12 +227,18 @@
                         </p>
  *@                     
 
-                             <p class="card-text text-muted">
+                               <p class="card-text text-muted">
                                 @{
-                                    // إزالة الوسوم HTML من النص
-                                    var plainText = Regex.Replace(item.Body, "<.*?>", string.Empty);
+                                    // إزالة الوسوم HTML
+                                    var plainText = Regex.Replace(item.Body ?? "", "<.*?>", string.Empty);
 
-                                    // عمل ملخص من 100 حرف فقط
+                                    // تحويل &nbsp; و &amp; وغيرها لنص عادي
+                                    plainText = System.Net.WebUtility.HtmlDecode(plainText);
+
+                                    // استبدال المسافات غير القابلة للكسر بمسافة عادية
+                                    plainText = plainText.Replace('\u00A0', ' ');
+
+                                    // عمل ملخص
                                     var summary = plainText.Length > 100
                                     ? plainText.Substring(0, 100) + " ..."
                                     : plainText;
